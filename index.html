@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <title>Fisheye_Home_page</title>
+ <link rel="stylesheet" href="index.css">
+ <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+ <link rel="preconnect" href="https://fonts.gstatic.com">
+ <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" rel="stylesheet">
+<!--sur la page d'accueil j'affiche l'ensemble des photographes et je vais mettre un lien vers la page 
+de détail de chacun avec detail.js.Dans ce lien : passer un paramètre d'url avec l'id de chacun--> 
+</head>
+<body>
+  <header id="header" role="banner">
+    <div>
+    <a href = "index.html" id="logo" aria-label="lien vers page d'accueil de FishEye">
+      <h1><img src="images/logo/fisheye-logo.png" id="logo" alt="logo de FishEye"/></h1>
+    </a>
+    </div>
+  <nav id="tags-nav">
+      <a class="tag" href= "tag-portrait" id="portrait"><span>#portrait</span></a>
+      <a class="tag" href= "tag-art" id="art"><span>#art</span></a>
+      <a class="tag" href= "tag-fashion" id="fashion"><span>#fashion</span></a>
+      <a class="tag" href= "tag-architecture" id="architecture"><span>#architecture</span></a>
+      <a class="tag" href= "tag-travel" id="travel"><span>#travel</span></a>
+      <a class="tag" href= "tag-sport" id="sport"><span>#sport</span></a>
+      <a class="tag" href= "tag-animals" id="animals"><span>#animals</span></a>
+      <a class="tag" href= "tag-events" id="events"><span>#events</span></a>
+<!--background: url(Architecture - Horseshoe.jpg);
+background: url(Fashion - Melody Red on Stripes.jpg);
+background: url(Portrait-Nora.jpg);
+background: url(Fashion - Urban Jungle.jpg);
+background: url(Travel - Outdoor Baths.jpg);
+background: url(Travel-Tower.jpg);-->
+  </nav><!--emplacement pour tags filtrants générés en js-->
+    <aside><h1>Nos photographes</h1></aside>
+  </header>
+  <a href="#"class="scroll">passer au contenu</a><!--scroll utile en format mobile-->
+  <main class="accueil" id= "main">
+ <div id="listPhotograph"><!-- mon conteneur pour les photographes featured--
+    <article>
+      <photographer-card id ="243" >
+      <a href="detail.html?id=243"></a><!-exemple lien page de détail de chaque photographe dans la page Photographer.js ? ou vont les infos récupérés ?--
+      <div id= "diaporama"></div>
+         <script src= "diaporama.js"></script>(code du diaporama actuellement dans photographer.js)
+         var diapo = new Diaporama(["/img/photo1.jpg", /img/photo2.jpg, etc..."]) (tous les photos du photographe par leur nom)
+      </photographer-card>
+        </article>
+            
+    <article>
+      <photographer-card id ="930">
+      <a href="detail.html?id=930">
+      <img src="">
+      <h2>""</h2>
+      <localisation>""</localisation>
+      <slogan>""</slogan>
+      <price>""€</price>
+      <tags>""</tags>
+      <div id= "diaporama">
+      <script src= "diaporama.js"><video>""</video></script>(code du diaporama actuellement dans photographer.js)
+      </div>
+    </photographer-card>
+        </article>
+              
+    <article>
+      <photographer-card id ="82"> 
+      <a href="detail.html?id=82"></a>
+      <div id= "diaporama"></div>
+       <script src= "diaporama.js"></script>
+      </photographer-card>  
+    </article>
+
+    <article>
+      <photographer-card id ="527"> 
+      <a href="detail.html?id=527"></a>
+      <div id= "diaporama"></div>
+       <script src= "diaporama.js"></script>
+       </photographer-card>
+    </article>
+
+    <article>
+       <photographer-card id ="925">
+      <a href="detail.html?id=925"></a>
+      <div id= "diaporama"></div>
+       <script src= "diaporama.js"></script>
+       </photographer-card>
+    </article>
+
+    <article>
+      <photographer-card id ="195">
+      <a href="detail.html?id=195"></a>
+      <img src="">
+      <h2>""</h2>
+      <localisation>""</localisation>
+      <slogan>""</slogan>
+      <price>""€</price>
+      <tags>""</tags>
+      <div id= "diaporama"></div>
+      <script src= "diaporama.js"><video>""</video></script>
+      </photographer-card>
+    </article>-->
+  </div>  
+  </main><!--contenant de tous les "articles"= photographes crées en js-->
+  <script type="text/javascript" src="fetch.js"></script>
+  <!--<script type="text/javascript" src="Photographer.js"></script>
+  <script type="text/javascript" src="List.js"></script>
+  <script type="text/javascript" src="script.js"></script>-->
+</body>      
+</html>
