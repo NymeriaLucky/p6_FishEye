@@ -1,79 +1,56 @@
 
+fetch("FishEyeData.json")
+            .then(res => res.json())
+            .then(jsonData => {
+            console.log(jsonData)
+            const photographersDiv = document.createElement("div")
+            photographersDiv.innerText = jsonData.photographers[0].name;//Là tu récupère le photographe[0], au lieu de ça tu pourrais récupérer un objet "photographes" 
+            document.getElementById("photographers").appendChild(photographersDiv)
+                          }); 
 
-fetch('FishEyeData.json') // demande de récuperation pour charger le fichier question//
-.then(response => 
-response.json()) // pour transformer le resultat du fichier qui est une chaine de caractère en un objet/tableau.js//
-.then(data => {
-var listPhotograph = document.getElementById('photographers');//mes instructions sur les données//
-for(const photographers of data.photographers){
-  listPhotograph.innerHTML += `<article alt="photographers profile">
-                      <a href ="" alt="photographers page">
-                          <div class="photo_graphers">
-                            <img src="photos/sample/id_photos/${photographers.portrait}" alt="Mimi Keel">
-                          </div>
-                            <p><span class="name">${photograph.name}</span>
-                            </p>
-                            <p class ="city" alt="photographers-city">
-                                ${photographers.city}
-                            </p>
-                            <p class ="slogan" alt="photographer-slogan">
-                                ${photographers.tagline}
-                            </p>
-                            <p class ="prices" alt="photographer-prices">
-                                ${photographers.price}€/jour
-                            </p>
-                              <nav aria-label="categories" id="tagsbox">
-                              </nav>
-                          </article>`; //liste de tous les tags
- var photographersTagsBox = document.getElementById('tagsbox');
- for(let tags of photographers.tags){
-   photographerstagsBox.innerHTML += `input type="button" value="#${photographersTags.tags}" alt= ${photographersTags}`;
- }//Pour les tags personnalisés attribués aux photographes ?//
- var photographersTagsBox = document.getElementById('tagsbox');                      
-    function buildTags(photographers) {
-      let list = new Set();
-      for (var i = 0; i < photographers.length; i++) {
-        let tags = photographers[i].tags;
-        for (var j = 0; j < tags.length; j++) {
-          list.add(tags[j]);
-        }
-      }
-      return list;          
-               }
-               }                           
-              }); 
-//Pas d'affichage dans chrome ! sinon utiliser le tableau ci-dessous //
+const photographers = jsonData.photographers
+jsonData.photographers.forEach ( photographer => {
+                            // tu rempli ton HTML
+                             // innertext = photographer.name
+                            // ... appendchild
+                          });
+then(jsonData => {
+    console.log(jsonData)
+                    // Je récupères tous les photographes dans une variable
+                    // Je prends les photographes et je boucle dessus
+                          // pour chaque photographe, je crée une div
+                          // je rempli la div avec le nom du photographe<
+                          // j'envoie la div dans le HTML avec appendchild
+                          // fin de la boucle
+                    // fin du fetch
+fetch("FishEyeData.json")
+            .then(res => res.json())
+            .then(jsonData => {
+            console.log(jsonData)
+            const photographers = jsonData.photographers
+            jsonData.photographers.forEach(photographer => {
+            photographersDiv.innerText = photographer.name
+            document.getElementById("photographers").appendChild(photographersDiv)
+            const photographersDiv = document.createElement("div")
+                        })
+                    });
+                    
+let childElement = document.createElement("article");
+            childElement.classList.add("pictures__picture");
 
-const array1 = [5, 12, 8, 130, 44];//id respectif des photographes, array2=medias
-const found = array1.find(element => element > 10);
+            childElement.innerHTML = `
+              <figure class="photo">
+                  <a href="assets/images/pictures/${media.url}" type="${media.type}">
+                       ${thumbnail}
+                  </a>
+                  <figcaption class="photo__details">
+                       <h2 class="photo-title">${media.name}</h2> 
+                       <p class="price">${media.price}€</p>
+                       <a href="#" class="likes likesBlock" aria-describedby="Mentions j'aime"><span class="likes">${media.likes} </span><em class="fas fa-heart"></em></a>
+                  </figcaption>
+              </figure>   
+            `;
 
-console.log(found);
-// a adapter pour récupérer les infos du photographe dans le tableau photographers venant du json, où mettre cette commande?
-
-/*et dans le tableau media du json, de récupérer les médias qui appartiennent au photograph dont l'id est 85 
-avec array.filter en adaptant suivant besoin:*/
-const tags = ['#portrait', '#art', '#fashion', '#architecture', '#travel', '#sport', '#animals', '#events'];
-
-const result = tags.filter(tags => tags.length > 6);
-
-console.log(result);
-// après récupération des données, afficher dans le DOM
-
- document.getElementById("moncontainer").innerHTML = `<div class="photograph">${photograph.nom}</div>`;
-
- //et adapter l'exemple suivant avec les données json
- let photograph =  `<div class="photograph">
-                                    <img src="/images/${photograph.img}">
-                                    <span class="name">${photograph.name}</span>
-                                  </div>`;
-
-/*afficher le contenu dans le html
- on parcours le tableau photographers du json et après selon les pages,
- il faudra filtrer ces données et les afficher*/
- 
-for(let photograph of data.photographers){
-document.getElementById("listPhotograph").innerHTML += `<div class="photograph"> 
-                                      <img src="/images/${photograph.img}">
-                                      <span class="name">${photograph.name}</span>
-                                  </div>`;
-};
+parentElement.appendChild(childElement); 
+                  }
+                }                 

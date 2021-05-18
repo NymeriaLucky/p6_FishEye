@@ -110,15 +110,3 @@ class ImageMedia {
 /*sortedData est un tableau filtré avec filter()
 qui correspond à l'ID de la page du photographe*/
 
-
-a développer :
-
-function buildTags(photographers) {
-  let list = new Set();
-  for (var i = 0; i < photographers.length; i++) {
-    let tags = photographers[i].tags;
-    for (var j = 0; j < tags.length; j++) {
-      list.add(tags[j]);
-    }
-  }
-  return list;
