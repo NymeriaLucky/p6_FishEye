@@ -1,7 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fisheye_Home_page</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" rel="stylesheet">
+
+    <!-- sur la page d'accueil j'affiche l'ensemble des photographes et je vais mettre un lien vers la page 
+        de détail de chacun avec detail.js.Dans ce lien : passer un paramètre d'url avec l'id de chacun--> 
 </head>
 <body>
-    <article>
-<script type="text/javascript" src="detail.js"></script>
-     </article>
-</body>
+  <!--
+  <script type="text/javascript">
+    const queryString = window.location.search;
+    console.log("queryString : " + queryString);
+    const urlParams = new URLSearchParams(queryString);
+    const id = urlParams.get("id");
+    console.log("id : " + id);
+  </script>
+  -->
+  <header id="header" role="banner">
+  
+      <a href = "index.html" id="logo" aria-label="lien vers page d'accueil de FishEye">
+        <img src="images/logo/fisheye-logo.png" id="logo" alt="logo de FishEye"/>
+      </a>
+
+      <nav>
+          <ul id="tags-nav">
+              <li><a class="tag" href= "tag-portrait" id="portrait"><span>#portrait</span></a></li>
+              <li><a class="tag" href= "tag-art" id="art"><span>#art</span></a></li>
+              <li><a class="tag" href= "tag-fashion" id="fashion"><span>#fashion</span></a></li>
+              <li><a class="tag" href= "tag-architecture" id="architecture"><span>#architecture</span></a></li>
+              <li><a class="tag" href= "tag-travel" id="travel"><span>#travel</span></a></li>
+              <li><a class="tag" href= "tag-sport" id="sport"><span>#sport</span></a></li>
+              <li><a class="tag" href= "tag-animals" id="animals"><span>#animals</span></a></li>
+              <li><a class="tag" href= "tag-events" id="events"><span>#events</span></a></li>
+
+              <!-- background: url(Architecture - Horseshoe.jpg);
+              background: url(Fashion - Melody Red on Stripes.jpg);
+              background: url(Portrait-Nora.jpg);
+              background: url(Fashion - Urban Jungle.jpg);
+              background: url(Travel - Outdoor Baths.jpg);
+              background: url(Travel-Tower.jpg);-->
+          </ul> <!-- emplacement pour tags filtrants générés en js -->
+      </nav> 
+
+      <aside><h1>Nos photographes</h1></aside>
+    </header>
+
+    <a href="#"class="scroll">passer au contenu</a> <!--scroll utile en format mobile -->
+ 
+    <main class="accueil" id="main">
+        <div id="detail">
+             <!-- le détail des photographes sont insérés ici par le javascript -->
+            <!--
+                {
+                  "id": 342550,
+                  "photographerId": 82,
+                  "image": "Fashion_Yellow_Beach.jpg",
+                  "tags": ["fashion"],
+                  "likes": 62,
+                  "date": "2011-12-08",
+                  "price": 55
+                },
+            -->
+        </div>  
+    </main> <!--contenant de tous les "articles"= photographes crées en js-->
+
+    <script type="text/javascript" src="detail.js"></script>
+</body>      
+</html>

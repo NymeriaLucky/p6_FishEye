@@ -36,37 +36,23 @@ header {
 #logo{
     width: 210px;
     height: 3rem;
-    left: 8px;
+    left: 5px;
     top:2px;
     justify-content: flex-start;
     position: absolute;
-}
-    
+}  
 /* Nos photographes */
-h1 aside{
-    text-align: right;   
-    position: absolute;
-    width: 316px;
-    height: 47px;
-    left: 1033px;
-    top: -10px;
-    font-family: DM Sans;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 36px;
-    line-height: 47px;
-    /* identical to box height */
-    color: #911C1C;
-    }
-    /* Group h1*/
-h1{
+h1 {
     --tw-text-opacity: 1;
     color: rgba(144,28,28,var(--tw-text-opacity));
     line-height: 1.75rem;
+    width: 306px;
+    height: 47px;
     position: absolute;
-    left: 0%;
+    font-family: DM Sans;
+    left: 1033px;
     right:-22%;
-    top: 5px;;
+    top: 5px;
     bottom: 0%;
     text-align: right;
     flex-grow: 1;
@@ -74,7 +60,8 @@ h1{
     display: block;
     font-size: 2em;
     font-weight: bold;
-    margin-block-start: 0.67em;  
+    margin-block-start: 0.67em; 
+    font-size: 36px;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -85,6 +72,7 @@ h1{
   blockquote, dd, dl, figure, h1, h2, h3, h4, h5, h6, hr, p, pre {
     margin: 0;
   }
+
 p{
   text-align: center;
   flex-wrap: wrap;
@@ -93,7 +81,7 @@ p{
 #tags-nav{ /* Rectangle 246 */
     text-align: center;
     display: flex;
-    justify-content:space-between;
+    justify-content:space-around;
     position: absolute;
     width: 553px;
     height: 49px;
@@ -105,7 +93,7 @@ p{
     margin:0;
     }
 
-  .tag {/*.photographer_cathegories #Portrait #Art #Fashion #Architecture #Travel #Sport #Animals #Events buttons*/
+.tag {/*.photographer_cathegories #Portrait #Art #Fashion #Architecture #Travel #Sport #Animals #Events buttons*/
     position: absolute;
     margin-right:.25rem;
     border-radius: 9999px;
@@ -125,7 +113,7 @@ p{
     color: rgba(144,28,28,var(--tw-text-opacity));
     transition-duration: .2s;
     color: #911C1C;
-  }
+}
   .scroll{
       opacity: 0;
   }
@@ -139,11 +127,10 @@ ul{
     margin:0;
     padding:0;
     justify-content: space-between;
-    align-items: center;
-    
+    align-items: center;   
 }
 */
-li{
+li {
 display: flex;
 list-style: none;
 padding: 0%;
@@ -171,6 +158,7 @@ audio, canvas, embed, iframe, img, object, svg, video {
     display: block;
     vertical-align: middle;
   }
+
 main{
   box-sizing: border-box;
 }
@@ -191,7 +179,7 @@ text-align: center;
 color: #D3573C;
 }
 /* London, UK */
-h5 localisation {
+h5 localisation1 localisation2 {
 position: absolute;
 left: 33.5%;
 right: 33%;
@@ -205,6 +193,68 @@ line-height: 17px;
 /* identical to box height */
 text-align: center;
 color: #901C1C;
+}
+
+blockquote {/* Voir le beau dans le quotidien */
+display: flex;
+flex-wrap: nowrap;
+position: relative;
+width: 100%;
+height: auto;
+text-align: center;
+font-family: DM Sans;
+font-style: normal;
+font-weight: normal;
+font-size: 13px;
+line-height: 15px;
+box-sizing: border-box;/* identical to box height */
+color: #000000;
+justify-content: space-around;
+padding: 5px;
+}
+
+/* prix€/jour */
+price{
+display: flex;
+flex-wrap: nowrap;
+position: relative;
+width: 100%;
+height: auto;
+position: relative;
+height: auto;
+text-align: center;
+font-family: DM Sans;
+font-style: normal;
+font-weight: normal;
+font-size: 12px;
+line-height: 15px;
+/* identical to box height */
+text-align: center;
+color: #757575;
+justify-content: space-around;
+}
+
+
+/* Rectangle 245 tagboxs individuels de la carte*/
+tagList{
+position: absolute;
+width: 263px;
+height: 30px;
+left: 72px;
+top: 518px;
+border: 2px solid #95FFF9;
+box-sizing: border-box;
+}
+
+tagsboxtag{ /* Rectangle 256 tags individuel de la carte*/
+position: absolute;
+width: 53px;
+height: 21px;
+left: 205px;
+top: 523px;
+border: 0.5px solid #C4C4C4;
+box-sizing: border-box;
+border-radius: 11px;
 }
 
 h2{
@@ -306,11 +356,13 @@ color: #D3573C;
 }
 
 article{
-  width: 32%;
+  width: 33%;
   text-align: center;
-  padding: 10px;
+  padding: 1%;
   height: auto;
+  justify-content: center;
 }
+
 div{
   display: flex;
   flex-direction: row;

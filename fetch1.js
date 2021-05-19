@@ -1,5 +1,5 @@
 
-fetch('FishEyeData.json') // demande de récuperation pour charger le fichier question
+fetch('data/FishEyeData.json') // demande de récuperation pour charger le fichier question
 .then(function (response) {
     return response.json();
 })
@@ -59,12 +59,13 @@ function appendData(data) {
             </photographer-card>
           </article>
         */
-
+ 
         var article = document.createElement("article");
         var h5 = document.createElement("h5"); //  city, country
         var img = document.createElement("img"); // portrait
         var a = document.createElement("a"); // lien vers détail id
         var h2 = document.createElement("h2"); // name
+        var blockquote = document.createElement("blockquote"); // slogan
         var slogan = document.createElement("slogan"); // tagline
         var iprice = document.createElement("price");
         var tags = document.createElement("tags"); // tableau tags
@@ -81,27 +82,36 @@ function appendData(data) {
         var price = photographer.price;
         var portrait = photographer.portrait;
    
-        h2.innerText= name;
-        a.appendChild(h2);
-
+        h2.innerText = name;
+        article.appendChild(h2);
+        // a.appendChild(h2);
+        // article.appendChild(document.createElement("br"));
+        
         a.title = name;
-        // a.innerText= name;
+        // a.innerHTML = "Fiche détaillée";
         a.href = "detail.html?id=" + id;
-        article.appendChild(a);
-        article.appendChild(document.createElement("br"));
+        // a.setAttribute('href', "detail.html?id=" + id);
+        // article.appendChild(a);
+
+        /*
+        <a href="https://www.example.com">
+            <img alt="image" src="image.jpg" width=200" height="200">
+        </a>
+        */
 
         img.src = "FishEyes_Photos/Sample_Photos/Photographers_ID_Photos/" + portrait;
-        img.alt = "Portrait";
+        img.alt = portrait;
         img.width = "200";
         img.height = "200";
-        article.appendChild(img);
-        article.appendChild(document.createElement("br"));
+        a.appendChild(img);
+        article.appendChild(a);
        
         h5.innerText = city + ", " + country;
         article.appendChild(h5);      
        
-        slogan.innerText = tagline;
-        article.appendChild(slogan);
+        blockquote.innerText = tagline;
+        //slogan.innerText = tagline;
+        article.appendChild(blockquote);
         article.appendChild(document.createElement("br"));
 
         iprice.innerText = price + " €/jour";
