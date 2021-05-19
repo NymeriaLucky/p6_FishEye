@@ -22,7 +22,7 @@ top: 5px;
 }
 /* Rectangle 34 header*/
 header {
-    display: flex;
+    display: inline-block;
     position: absolute;
     width: 968px;
     height: 157px;
@@ -31,15 +31,15 @@ header {
     box-sizing: border-box;
     flex-wrap: wrap;
     flex-direction: row;
-    
 }
  /* .logo */
 #logo{
     width: 210px;
     height: 3rem;
-    left: 16px;
+    left: 8px;
     top:2px;
     justify-content: flex-start;
+    position: absolute;
 }
     
 /* Nos photographes */
@@ -65,14 +65,15 @@ h1{
     line-height: 1.75rem;
     position: absolute;
     left: 0%;
-    right: 0%;
-    top: 0%;
+    right:-22%;
+    top: 5px;;
     bottom: 0%;
     text-align: right;
     flex-grow: 1;
     order: 2;
     display: block;
     font-size: 2em;
+    font-weight: bold;
     margin-block-start: 0.67em;  
   }
 
@@ -90,16 +91,17 @@ p{
 }
 
 #tags-nav{ /* Rectangle 246 */
+    text-align: center;
     display: flex;
     justify-content:space-between;
     position: absolute;
     width: 553px;
     height: 49px;
     left: 388px;
-    top: 43px;
+    top: 3px;
     box-sizing: border-box;
     align-content: start;
-    padding:0;
+    margin:10px;
     margin:0;
     }
 
@@ -152,14 +154,19 @@ align-items:stretch;
 }
 
 img {
-    border-radius: 50%;
-  }
-
+border-radius: 50%;
+position: center;
+height: 200px;
+margin-left: auto;
+margin-right: auto;
+width: 200px;
+}
+/*
 img, video {
     max-width: 100%;
     height: auto;
   }
-  
+ */ 
 audio, canvas, embed, iframe, img, object, svg, video {
     display: block;
     vertical-align: middle;
@@ -167,7 +174,6 @@ audio, canvas, embed, iframe, img, object, svg, video {
 main{
   box-sizing: border-box;
 }
-
  /* Mimi Keel */
 #MimiKeel{
 position: absolute;
@@ -184,6 +190,22 @@ line-height: 47px;
 text-align: center;
 color: #D3573C;
 }
+/* London, UK */
+h5 localisation {
+position: absolute;
+left: 33.5%;
+right: 33%;
+top: 86.13%;
+bottom: 8.39%;
+font-family: DM Sans;
+font-style: normal;
+font-weight: normal;
+font-size: 13px;
+line-height: 17px;
+/* identical to box height */
+text-align: center;
+color: #901C1C;
+}
 
 h2{
   line-height: 1.375;
@@ -199,11 +221,8 @@ h2, h3 {
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
-
-div{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+h5{
+  color: #911C1C;
 }
 /* Ellie-Rose Wilkens */
 #Ellie-RoseWilkens{
@@ -212,7 +231,6 @@ left: -25%;
 right: -25.5%;
 top: 70.97%;
 bottom: 13.87%;
-
 font-family: DM Sans;
 font-style: normal;
 font-weight: normal;
@@ -220,7 +238,6 @@ font-size: 36px;
 line-height: 47px;
 /* identical to box height */
 text-align: center;
-
 color: #D3573C;
 }
 /* Tracy Galindo */
@@ -230,7 +247,6 @@ left: -7%;
 right: -7.5%;
 top: 70.97%;
 bottom: 13.87%;
-
 font-family: DM Sans;
 font-style: normal;
 font-weight: normal;
@@ -238,7 +254,6 @@ font-size: 36px;
 line-height: 47px;
 /* identical to box height */
 text-align: center;
-
 color: #D3573C;
 }
 
@@ -264,7 +279,6 @@ left: -8%;
 right: -8.5%;
 top: 70.97%;
 bottom: 13.87%;
-
 font-family: DM Sans;
 font-style: normal;
 font-weight: normal;
@@ -272,7 +286,6 @@ font-size: 36px;
 line-height: 47px;
 /* identical to box height */
 text-align: center;
-
 color: #D3573C;
 }
 /* Marcel Nikolic */
@@ -282,7 +295,6 @@ left: -7.5%;
 right: -7.5%;
 top: 70.97%;
 bottom: 13.87%;
-
 font-family: DM Sans;
 font-style: normal;
 font-weight: normal;
@@ -290,11 +302,17 @@ font-size: 36px;
 line-height: 47px;
 /* identical to box height */
 text-align: center;
-
 color: #D3573C;
 }
 
 article{
-  max-width: 32%;
-  max-height: 30%;
+  width: 32%;
+  text-align: center;
+  padding: 10px;
+  height: auto;
+}
+div{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }

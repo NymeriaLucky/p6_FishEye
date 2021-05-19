@@ -1,20 +1,18 @@
 /* photographer-page */
-
+html{
 position: relative;
 width: 1440px;
 height: 1024px;
-
 background: #FFFFFF;
-
-
+}
 /* .logo */
-
+logo {
 position: absolute;
 width: 200px;
 height: 50px;
 left: 79px;
 top: 41px;
-
+}
 
 
 /* Group */

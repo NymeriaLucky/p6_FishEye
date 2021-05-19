@@ -18,7 +18,6 @@
       <a href = "index.html" id="logo" aria-label="lien vers page d'accueil de FishEye">
         <img src="images/logo/fisheye-logo.png" id="logo" alt="logo de FishEye"/>
       </a>
-
       <nav>
           <ul id="tags-nav">
               <li><a class="tag" href= "tag-portrait" id="portrait"><span>#portrait</span></a></li>
@@ -29,7 +28,6 @@
               <li><a class="tag" href= "tag-sport" id="sport"><span>#sport</span></a></li>
               <li><a class="tag" href= "tag-animals" id="animals"><span>#animals</span></a></li>
               <li><a class="tag" href= "tag-events" id="events"><span>#events</span></a></li>
-
               <!--background: url(Architecture - Horseshoe.jpg);
               background: url(Fashion - Melody Red on Stripes.jpg);
               background: url(Portrait-Nora.jpg);
@@ -45,67 +43,60 @@
     <a href="#"class="scroll">passer au contenu</a> <!--scroll utile en format mobile-->
  
     <main class="accueil" id="main">
-        <div id="listPhotograph"> <!-- mon conteneur pour les photographes featured-->
-        </div>
-    
+     <div id="listPhotograph"> <!-- mon conteneur pour les photographes featured-->
+        
         <div id="list">
             <article>
-              <div class = "photographerCard1" id ="MimiKeel" >
+               <div class = "photographerCard1" id ="MimiKeel" >
                   <a href="detail.html?id=243"></a><!--exemple lien page de détail de chaque photographe dans la page Photographer.js ? ou vont les infos récupérés ?-->
-                  <div id= "diaporama"></div>
-                  <script src= "diaporama.js"></script><!-- (code du diaporama actuellement dans photographer.js)
-                    var diapo = new Diaporama(["/img/photo1.jpg", /img/photo2.jpg, etc..."]) (tous les photos du photographe par leur nom)-->
-                </div>
+                  <a href="photographer-page.html?id=243"></a>
+               </div>
             </article>
               
             <article>
-                  <div class = photographerCard2 id ="Ellie-RoseWilkens">
+               <div class = photographerCard2 id ="Ellie-RoseWilkens">
                   <a href="detail.html?id=930">
-                  <div id= "diaporama"></div>
-                  <script src= "diaporama.js"></script><!--(code du diaporama actuellement dans photographer.js)-->
-                  </div>
+                  <a href="photographer-page.html?id =930"></a>
                 </div>
             </article>
             
             <article>
-                  <div class = photographerCard3 id ="TracyGalindo"> 
+              <div class = photographerCard3 id ="TracyGalindo"> 
                   <a href="detail.html?id=82"></a>
-                  <div id= "diaporama"></div>
-                  <script src= "diaporama.js"></script>
-                  </div>  
+                  <a href="photographer-page.html?id= 82"></a>
+              </div>
             </article>
 
             <article>
-                  <div class = photographerCard4 id ="NabeelBradford"> 
+                <div class = photographerCard4 id ="NabeelBradford"> 
                   <a href="detail.html?id=527"></a>
-                  <div id= "diaporama"></div>
-                  <script src= "diaporama.js"></script>
-                  </div>
+                  <a href="photographer-page.html?id =527"></a>
+                </div>  
             </article>
 
             <article>
-                  <div class = photographerCard5 id ="RhodeDubois">
+                <div class = photographerCard5 id ="RhodeDubois">
                   <a href="detail.html?id=925"></a>
-                  <div id= "diaporama"></div>
-                  <script src= "diaporama.js"></script>
-                  </div>
+                  <a href="photographer-page.html?id=925"></a>
+                 </div> 
             </article>
 
             <article>
-                  <div class = photographerCard6 id ="MarcelNikolic">
+                <div class = photographerCard6 id ="MarcelNikolic">
                   <a href="detail.html?id=195"></a>
-                  <div id= "diaporama"></div>
-                  <script src= "diaporama.js"><video>""</video></script>
-                  </div>
+                  <a href="photographer-page.html?id=195"></a>
+                </div>
             </article>
-        </div>  
-    </main> <!--contenant de tous les "articles"= photographes crées en js sur fetch1.js-->
+          </div>
+      </div>  
+    </main> <!--contenant de tous les "articles"(card)= photographes crées en js sur fetch1.js-->
 
     <script type="text/javascript" src="fetch1.js"></script>
     
     <!-- <script type="text/javascript" src="Photographer.js"></script>
     <script type="text/javascript" src="List.js"></script>
     <script type="text/javascript" src="script.js"></script>
-    <script type="text/javascript" src="List.js"></script> -->
+    <script type="text/javascript" src="detail.js"></script>
+     -->
 </body>      
 </html>
