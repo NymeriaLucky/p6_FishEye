@@ -1,16 +1,16 @@
 * {
-    box-sizing: border-box;
-  }
+  box-sizing: border-box;
+}
 
 html {/* Index */
-    position: relative;
-    width: 1440px;
-    height: 1024px;
-    background: #FFFFFF;
-    display: block;
-    font-family: dm-sans,ui-sans-serif,verdana,system-ui;
-    line-height: 1.5;
-    tab-size: 4;
+  position: relative;
+  width: 1440px;
+  height: 1024px;
+  background: #FFFFFF;
+  display: block;
+  font-family: dm-sans,ui-sans-serif,verdana,system-ui;
+  line-height: 1.5;
+  tab-size: 4;
 }
 
 body{/* Vector 1*/ 
@@ -22,112 +22,112 @@ top: 5px;
 }
 /* Rectangle 34 header*/
 header {
-    display: inline-block;
-    position: absolute;
-    width: 968px;
-    height: 157px;
-    left: 7px;
-    top: 3px;
-    box-sizing: border-box;
-    flex-wrap: wrap;
-    flex-direction: row;
+  display: inline-block;
+  position: absolute;
+  width: 968px;
+  height: 157px;
+  left: 7px;
+  top: 3px;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+  flex-direction: row;
 }
- /* .logo */
+/* .logo */
 #logo{
-    width: 210px;
-    height: 3rem;
-    left: 5px;
-    top:2px;
-    justify-content: flex-start;
-    position: absolute;
+  width: 210px;
+  height: 3rem;
+  left: 5px;
+  top:2px;
+  justify-content: flex-start;
+  position: absolute;
 }  
 /* Nos photographes */
 h1 {
-    --tw-text-opacity: 1;
-    color: rgba(144,28,28,var(--tw-text-opacity));
-    line-height: 1.75rem;
-    width: 306px;
-    height: 47px;
-    position: absolute;
-    font-family: DM Sans;
-    left: 1033px;
-    right:-22%;
-    top: 5px;
-    bottom: 0%;
-    text-align: right;
-    flex-grow: 1;
-    order: 2;
-    display: block;
-    font-size: 2em;
-    font-weight: bold;
-    margin-block-start: 0.67em; 
-    font-size: 36px;
-  }
+  --tw-text-opacity: 1;
+  color: rgba(144,28,28,var(--tw-text-opacity));
+  line-height: 1.75rem;
+  width: 306px;
+  height: 47px;
+  position: absolute;
+  font-family: DM Sans;
+  left: 1033px;
+  right:-22%;
+  top: 5px;
+  bottom: 0%;
+  text-align: right;
+  flex-grow: 1;
+  order: 2;
+  display: block;
+  font-size: 2em;
+  font-weight: bold;
+  margin-block-start: 0.67em; 
+  font-size: 36px;
+}
 
-  h1, h2, h3, h4, h5, h6 {
-    font-size: inherit;
-    font-weight: inherit;
-  }
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
 
-  blockquote, dd, dl, figure, h1, h2, h3, h4, h5, h6, hr, p, pre {
-    margin: 0;
-  }
+blockquote, dd, dl, figure, h1, h2, h3, h4, h5, h6, hr, p, pre {
+  margin: 0;
+}
 
 p{
-  text-align: center;
-  flex-wrap: wrap;
+text-align: center;
+flex-wrap: wrap;
 }
 
 #tags-nav{ /* Rectangle 246 */
-    text-align: center;
-    display: flex;
-    justify-content:space-around;
-    position: absolute;
-    width: 553px;
-    height: 49px;
-    left: 388px;
-    top: 3px;
-    box-sizing: border-box;
-    align-content: start;
-    margin:10px;
-    margin:0;
-    }
-
-.tag {/*.photographer_cathegories #Portrait #Art #Fashion #Architecture #Travel #Sport #Animals #Events buttons*/
-    position: absolute;
-    margin-right:.25rem;
-    border-radius: 9999px;
-    border-width: 1px;
-    border-style: solid;
-    --tw-border-opacity: 1;
-    border-color: rgba(209,213,219,var(--tw-border-opacity));
-    padding-left: .5rem;
-    padding-right: .5rem;
-    padding-top: .25rem;
-    padding-bottom: .25rem;
-    font-size: .875rem;
-    line-height: 1.25rem;
-    font-weight: 500;
-    line-height: 2rem;
-    --tw-text-opacity: 1;
-    color: rgba(144,28,28,var(--tw-text-opacity));
-    transition-duration: .2s;
-    color: #911C1C;
-}
-  .scroll{
-      opacity: 0;
+  text-align: center;
+  display: flex;
+  justify-content:space-around;
+  position: absolute;
+  width: 553px;
+  height: 49px;
+  left: 388px;
+  top: 3px;
+  box-sizing: border-box;
+  align-content: start;
+  margin:10px;
+  margin:0;
   }
 
+.tag {/*.photographer_cathegories #Portrait #Art #Fashion #Architecture #Travel #Sport #Animals #Events buttons*/
+  position: absolute;
+  margin-right:.25rem;
+  border-radius: 9999px;
+  border-width: 1px;
+  border-style: solid;
+  --tw-border-opacity: 1;
+  border-color: rgba(209,213,219,var(--tw-border-opacity));
+  padding-left: .5rem;
+  padding-right: .5rem;
+  padding-top: .25rem;
+  padding-bottom: .25rem;
+  font-size: .875rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+  line-height: 2rem;
+  --tw-text-opacity: 1;
+  color: rgba(144,28,28,var(--tw-text-opacity));
+  transition-duration: .2s;
+  color: #911C1C;
+}
+.scroll{
+    opacity: 0;
+}
+
 a {
-    color: inherit;
-    text-decoration: inherit;
+  color: inherit;
+  text-decoration: inherit;
 }/*
 ul{
-    display: flex;
-    margin:0;
-    padding:0;
-    justify-content: space-between;
-    align-items: center;   
+  display: flex;
+  margin:0;
+  padding:0;
+  justify-content: space-between;
+  align-items: center;   
 }
 */
 li {
@@ -150,19 +150,19 @@ width: 200px;
 }
 /*
 img, video {
-    max-width: 100%;
-    height: auto;
-  }
- */ 
+  max-width: 100%;
+  height: auto;
+}
+*/ 
 audio, canvas, embed, iframe, img, object, svg, video {
-    display: block;
-    vertical-align: middle;
-  }
+  display: block;
+  vertical-align: middle;
+}
 
 main{
-  box-sizing: border-box;
+box-sizing: border-box;
 }
- /* Mimi Keel */
+/* Mimi Keel */
 #MimiKeel{
 position: absolute;
 left: 10.5%;
@@ -246,7 +246,7 @@ border: 2px solid #95FFF9;
 box-sizing: border-box;
 }
 
-tagsboxtag{ /* Rectangle 256 tags individuel de la carte*/
+PhotographerTagsBox{ /* Rectangle 256 tags individuel de la carte*/
 position: absolute;
 width: 53px;
 height: 21px;
@@ -258,21 +258,21 @@ border-radius: 11px;
 }
 
 h2{
-  line-height: 1.375;
-  text-align: center;
-  color:#911C1C;
-  font-size: 2.25rem;
-  line-height: 2.5rem;
-  --tw-text-opacity: 1;
-  color: rgba(211,87,60,var(--tw-text-opacity));
+line-height: 1.375;
+text-align: center;
+color:#911C1C;
+font-size: 2.25rem;
+line-height: 2.5rem;
+--tw-text-opacity: 1;
+color: rgba(211,87,60,var(--tw-text-opacity));
 }
 
 h2, h3 {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+margin-top: 1rem;
+margin-bottom: 1rem;
 }
 h5{
-  color: #911C1C;
+color: #911C1C;
 }
 /* Ellie-Rose Wilkens */
 #Ellie-RoseWilkens{
@@ -356,15 +356,15 @@ color: #D3573C;
 }
 
 article{
-  width: 33%;
-  text-align: center;
-  padding: 1%;
-  height: auto;
-  justify-content: center;
+width: 33%;
+text-align: center;
+padding: 1%;
+height: auto;
+justify-content: center;
 }
 
 div{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
 }

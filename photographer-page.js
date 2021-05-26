@@ -20,7 +20,18 @@
     
     return Page;
 }
+//filtrer les éléments de l'article réutilisés et appelés dans la page
+let photographerCard = [name,id,city,country,tags,tagline, portrait];
+
+function showArray(data){
+	let article = document.getElementById("article");
+  for(let value of data){
+  		container.innerHTML += value;
+  }
 }
+let filteredArray = array.filter(element => element <= 5);
+showArray(filteredArray);
+
 
 
 function appendData(data) {
@@ -72,7 +83,6 @@ function appendData(data) {
 }
 
 }
-
 
 
 //ouverture de la modal formulaire dans la page des photographes.

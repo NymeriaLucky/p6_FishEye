@@ -6,12 +6,13 @@ height: 1024px;
 background: #FFFFFF;
 }
 /* .logo */
-logo {
+#logo {
+border-radius: 0px;
 position: absolute;
 width: 200px;
 height: 50px;
-left: 79px;
-top: 41px;
+left: 100px;
+top: 43px;
 }
 
 
@@ -969,6 +970,11 @@ top: 131px;
 
 
 /* Rectangle 5 */
+.photograph-header{
+height: 313px;
+width: 1240px;
+
+border-radius: 5px;
 
 position: absolute;
 left: 0%;
@@ -978,7 +984,7 @@ bottom: 0%;
 
 background: #FAFAFA;
 border-radius: 5px;
-
+}
 
 /* .user */
 
@@ -1003,7 +1009,7 @@ box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.25);
 
 
 /* img */
-
+img {
 position: absolute;
 left: -81%;
 right: -82%;
@@ -1011,16 +1017,18 @@ top: -25%;
 bottom: -54%;
 
 background: url(Portrait-Nora.jpg);
-
+}
 
 /* .photographer-profile */
-
+.photographer-profile{
+height: 83px;
+width: 282px;
 position: absolute;
 left: 4.03%;
 right: 67.1%;
 top: 17.89%;
 bottom: 18.21%;
-
+}
 
 
 /* Mimi Keel */
@@ -1078,7 +1086,7 @@ color: #525252;
 
 
 /* #portrait #events #travel #animals */
-
+tags{
 position: absolute;
 left: 1.12%;
 right: -33.24%;
@@ -1092,7 +1100,7 @@ font-size: 18px;
 line-height: 23px;
 
 color: #911C1C;
-
+}
 
 
 /* Rectangle 41 */
@@ -1117,9 +1125,8 @@ top: 20.13%;
 bottom: 57.83%;
 
 
-
 /* Rectangle 2 */
-
+.contact-button {
 position: absolute;
 left: 0%;
 right: 0%;
@@ -1128,7 +1135,7 @@ bottom: 0%;
 
 background: #911C1C;
 border-radius: 5px;
-
+}
 
 /* expand_more-24px 4 */
 
@@ -1152,7 +1159,7 @@ opacity: 0.87;
 
 
 /* label */
-
+#Contact-Me{
 position: absolute;
 left: 6.47%;
 right: 6.47%;
@@ -1170,7 +1177,7 @@ align-items: center;
 text-align: center;
 
 color: #FFFFFF;
-
+}
 
 
 /* .dropdown-open */
@@ -1444,8 +1451,8 @@ color: #000000;
 position: absolute;
 width: 74px;
 height: 23px;
-left: 76px;
-top: 464px;
+left: 97px;
+top: 466px;
 
 font-family: DM Sans;
 font-style: normal;
