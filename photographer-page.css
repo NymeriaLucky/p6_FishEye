@@ -15,7 +15,17 @@ left: 100px;
 top: 43px;
 }
 
-
+/* .photograph-header */
+#header{
+    position: absolute;
+    width: 1240px;
+    height: 313px;
+    left: 79px;
+    top: 131px;
+    border-radius: 5px;
+    background: #FAFAFA;
+    }
+    
 /* Group */
 
 position: absolute;
@@ -156,13 +166,13 @@ border-radius: 5px;
 
 
 /* .likes */
-
+.likes{
 position: absolute;
 left: 87.25%;
 right: 0%;
 top: 88.32%;
 bottom: 2.85%;
-
+}
 
 
 /* favorite-24px 1 */
@@ -958,34 +968,6 @@ text-align: right;
 color: #911C1C;
 
 
-
-/* .photograph-header */
-
-position: absolute;
-width: 1240px;
-height: 313px;
-left: 79px;
-top: 131px;
-
-
-
-/* Rectangle 5 */
-.photograph-header{
-height: 313px;
-width: 1240px;
-
-border-radius: 5px;
-
-position: absolute;
-left: 0%;
-right: 0%;
-top: 0%;
-bottom: 0%;
-
-background: #FAFAFA;
-border-radius: 5px;
-}
-
 /* .user */
 
 position: absolute;
@@ -1007,7 +989,6 @@ bottom: 0%;
 background: #C4C4C4;
 box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.25);
 
-
 /* img */
 img {
 position: absolute;
@@ -1015,7 +996,6 @@ left: -81%;
 right: -82%;
 top: -25%;
 bottom: -54%;
-
 background: url(Portrait-Nora.jpg);
 }
 
@@ -1064,8 +1044,6 @@ font-size: 24px;
 line-height: 31px;
 
 color: #901C1C;
-
-
 
 /* Voir le beau dans le quotidien */
 

@@ -84,7 +84,6 @@ function appendData(data) {
 
 }
 
-
 //ouverture de la modal formulaire dans la page des photographes.
 let testForm = document.querySelectorAll(".pp_contact");
 let ouverture = document.querySelector(".form_modal");
@@ -100,3 +99,143 @@ Fermeture : $("#monIdDeModalAFermer").fadeOut(5000),
 Ouverture :$("#monIdDemodalAOuvrir").fadeIn(2500),
 
 Le nombre entre parenthèse étant un délai choisi par toi*/
+
+
+
+
+//essai myriam :
+// factory pattern , fonction pour filtrer les images du photographe suivant le tag et id
+
+ tableauMedia.filter(media => media.photographerId == id)
+
+ class photographerId{
+            showArray(data){
+                 find('image') //soit diaporama ?
+                 image <= 10
+                 return('image'+"")
+             }
+     
+            showArray(data){
+                 find('title') //un titre pour chaque image
+                 return('title')
+             }
+
+            showArray(data){
+                 find('date') //une date pur chaque image
+                 return('date')
+            }
+
+            showArray(data){
+                 find('likes') //nombre de likes pour chaque image
+                 return('likes')
+            }  
+         
+ }
+
+ function factory(Id){
+      switch(Id){
+        case 'image':
+                return new image("")
+        case 'title':
+                return new title()
+        case 'date' :
+                return new date()
+        case'likes' :
+                return new likes()
+      }
+ }
+
+ const photographer = factory('tags');
+ photographerId.showArray(data);
+
+
+
+ //autre essai
+ // Un composant qui affichera tous les médias du photographe sur sa page
+ 
+export class PhotographerMedias extends HTMLElement {
+  constructor() {
+      super();
+      // obtenir l'identifiant du photographe à partir de l'url
+      this.id = window.history.state.url.slice(5);
+      // obtenir les médias des photographes
+      this.medias = this.getMedias(this.id);
+  }
+  /**
+   * Insérez un modèle, puis appelez short() & render() & listenSort
+   */
+  connectedCallback () {
+      const template = document.createElement('template');
+      template.innerHTML = `
+      <section class="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-4">
+      </section>
+      `;
+      this.appendChild(template.content);
+      this.sort("date");
+      this.render();
+      this.listenSort();
+  }
+  /**
+   *  Effacez la section, puis créez une <media-card> pour chaque média
+   */
+  render() {
+      this.querySelector("section").innerHTML = "";
+      this.medias.forEach(media => {
+          this.querySelector("section").insertAdjacentHTML('beforeEnd', 
+          '<media-card id="num' + media.id + '"></media-card>');
+      });
+  }
+
+  /**
+   *Boutton trier les médias par date, likes ou titre
+   * @param {sting} value - parameters of sorting
+   */
+  sort(value) {
+      switch (value) {
+          case "date":
+              this.medias.sort((m1, m2) => {
+                  let d1 = new Date(m1.date);
+                  let d2 = new Date(m2.date);
+                  return d2 - d1;
+              })
+              break;
+      
+          case "likes":
+              this.medias.sort((m1, m2) => m2.likes - m1.likes);
+              break;
+      
+          case "title":
+              this.medias.sort((m1, m2) => m1.title.toLowerCase().localeCompare(m2.title.toLowerCase()));
+              break;
+      
+          default:
+              console.error("Oops");
+              break;
+      }
+  }
+
+  /**
+   * Écoutez le composant <medias-select> et sort() lorsqu'un paramètre de tri est sélectionné
+   */
+   listenSort() {
+      document.getElementById("sortMedias").addEventListener('change', select => {
+          this.sort(select.target.value)
+          this.render();
+      })
+  }
+
+  /**
+   * A partir d'un ID retourner un tableau avec tous les médias du photographe depuis le JSON
+   * @param {integer} id - id du photographer
+   * @returns {array} - les medias du photographe
+   */
+
+  getMedias(id) {
+      // renvoyer le photographe dans le JSON dont l'identifiant correspond à l'identifiant demandé
+      return data.media.filter(media => media.photographerId == id);
+  }
+
+}
+
+// Importer des données depuis le JSON
+import data from '../../../FishEyeDataFR.json'

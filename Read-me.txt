@@ -22,9 +22,9 @@ like)/date/titre
 - Et l'axe principal de ce projet rendre le site accessible , au visiteur en
 situation de handicap.
 
-Bref il y à énormément de travail à fournir. 
-T'approprier le projet et le faire en fonction de tes connaissances.
-Il y à beaucoup à apprendre et tu devras t'appuyer sur beaucoup de ressources externes pour trouver les solutions les plus pertinentes.
+ 
+M'approprier le projet et le faire en fonction de mes connaissances.
+Il y a beaucoup à apprendre et tu devras t'appuyer sur beaucoup de ressources externes pour trouver les solutions les plus pertinentes.
  
 Ce projet est difficile mais cela reste gratifiant de trouver une solution à chaque features.
 

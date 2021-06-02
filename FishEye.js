@@ -20,7 +20,7 @@
   }
   console.log("shorter.image =", shorter.image)
 
-  Là c'est ma fonction appellante
+ // Là c'est ma fonction appellante
 loadContent().then((data) => {
   /**
    * @param {URLSearchParams} (window.location.search) fetch => ?id={number}
@@ -64,7 +64,7 @@ loadContent().then((data) => {
 
   console.log('TEST', mediaphto)
 }
-Et mon objet :
+//Et mon objet :
 class ImageMedia {
   /**
        *

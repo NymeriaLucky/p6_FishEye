@@ -47,7 +47,7 @@ h1 {
   color: rgba(144,28,28,var(--tw-text-opacity));
   line-height: 1.75rem;
   width: 306px;
-  height: 47px;
+  height: 48px;
   position: absolute;
   font-family: DM Sans;
   left: 1033px;
@@ -78,7 +78,7 @@ text-align: center;
 flex-wrap: wrap;
 }
 
-#tags-nav{ /* Rectangle 246 */
+#tag-nav{ /* Rectangle 246 photographerstagBox*/
   text-align: center;
   display: flex;
   justify-content:space-around;
@@ -86,15 +86,21 @@ flex-wrap: wrap;
   width: 553px;
   height: 49px;
   left: 388px;
-  top: 3px;
   box-sizing: border-box;
   align-content: start;
   margin:10px;
   margin:0;
+  list-style: none;
   }
-
-.tag {/*.photographer_cathegories #Portrait #Art #Fashion #Architecture #Travel #Sport #Animals #Events buttons*/
-  position: absolute;
+/*
+  ul{
+    display: flex;
+    margin:0;
+    padding:0;
+    justify-content: space-between;
+    align-items: center;   
+  }*/
+.tag{/*.photographer_cathegories #Portrait #Art #Fashion #Architecture #Travel #Sport #Animals #Events buttons*/
   margin-right:.25rem;
   border-radius: 9999px;
   border-width: 1px;
@@ -114,6 +120,29 @@ flex-wrap: wrap;
   transition-duration: .2s;
   color: #911C1C;
 }
+
+article tags{
+  position: relative;
+  margin-right:.25rem;
+  border-radius: 9999px;
+  border-width: 1px;
+  border-style: solid;
+  --tw-border-opacity: 1;
+  border-color: rgba(209,213,219,var(--tw-border-opacity));
+  padding-left: .5rem;
+  padding-right: .5rem;
+  padding-top: .25rem;
+  padding-bottom: .25rem;
+  font-size: .875rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+  line-height: 2rem;
+  --tw-text-opacity: 1;
+  color: rgba(144,28,28,var(--tw-text-opacity));
+  transition-duration: .2s;
+  color: #911C1C;
+}
+
 .scroll{
     opacity: 0;
 }
@@ -121,24 +150,16 @@ flex-wrap: wrap;
 a {
   color: inherit;
   text-decoration: inherit;
-}/*
-ul{
-  display: flex;
-  margin:0;
-  padding:0;
-  justify-content: space-between;
-  align-items: center;   
 }
-*/
+/*
 li {
-display: flex;
 list-style: none;
 padding: 0%;
 flex-wrap: wrap;
 width: 100%;
 justify-content: space-between;
 align-items:stretch;
-}
+}*/
 
 img {
 border-radius: 50%;
@@ -147,6 +168,8 @@ height: 200px;
 margin-left: auto;
 margin-right: auto;
 width: 200px;
+flex-wrap:wrap;
+zoom: normal;
 }
 /*
 img, video {
@@ -235,7 +258,7 @@ justify-content: space-around;
 }
 
 
-/* Rectangle 245 tagboxs individuels de la carte*/
+/* Rectangle 245 tagboxs individuels de la carte*
 tagList{
 position: absolute;
 width: 263px;
@@ -246,7 +269,7 @@ border: 2px solid #95FFF9;
 box-sizing: border-box;
 }
 
-PhotographerTagsBox{ /* Rectangle 256 tags individuel de la carte*/
+PhotographerTagsBox{ /* Rectangle 256 tags individuel de la carte
 position: absolute;
 width: 53px;
 height: 21px;
@@ -256,7 +279,7 @@ border: 0.5px solid #C4C4C4;
 box-sizing: border-box;
 border-radius: 11px;
 }
-
+*/
 h2{
 line-height: 1.375;
 text-align: center;
