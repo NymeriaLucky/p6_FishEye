@@ -5,7 +5,7 @@
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1">
  <title>photographer-page</title>
- <link rel="stylesheet" href="photographer-page.css">
+ <link rel="stylesheet" href="src/style/photographer-page.css">
  <link rel="stylesheet" href="liste déroulante/listeD.css">
  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
  <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -13,6 +13,7 @@
  <link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" rel="stylesheet">
  </head>
  <body>
+   <user-page id = "">
     <header id="header" role="banner" alt= photograph-header>
         <div>
         <a href = "index.html" id="logo" aria-label="lien vers page d'accueil de FishEye">
@@ -27,7 +28,8 @@
             </div>
           </article>
           <div>
-              <span class="contact-button" type="button" id="Contact-Me"><button>Contactez-moi</button></span>
+              <span class="contact-button" type="button" id="Contact-Me"><button onclick>Contactez-moi</button></span>
+              <a href="src/script/photographer-page.js"></a>
           </div>
       </div>
       </header>      
@@ -36,12 +38,16 @@
          <p>Trier par</p>
             <span><button>Popularité</button></span><href="listeD.html"></href>
       </div>
-      <div id= "diaporama"></div>
-      <script src= "diaporama.js"></script><!-- (code du diaporama actuellement dans photographer.js)
-        var diapo = new Diaporama(["/img/photo1.jpg", /img/photo2.jpg, etc..."]) (tous les photos du photographe par leur nom)-->
+      <div id= "diaporama"></div>  
     </container>
-  <div>""likes</div>
-  <button><price>""€/jour</price></button>
-  <script src= "detail.js"></script>  
- </body>
+    <div>""likes</div>
+  <button><price>""€/jour</price></button>  
+</user-page>
+
+  <script type = "photos/javascript" src= "src/script/diaporama.js"></script><!-- (code du diaporama actuellement dans photographer.js)
+    var diapo = new Diaporama(["/img/photo1.jpg", /img/photo2.jpg, etc..."]) (tous les photos du photographe par leur nom)-->
+  <script type = "text/javascript" src= "src/script/detail.js"></script>
+  <script typre="form/javasrcipt" src= "src/script/form-modal.js"></script>
+  <script type="text/javascript" src="src/script/photographer-page.js"></script>
+</body>
  </html>

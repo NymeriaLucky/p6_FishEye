@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Fisheye_Home_page</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="src/style/index.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
@@ -16,11 +16,11 @@
   <header id="header" role="banner">
   
       <a href = "index.html" id="logo" aria-label="lien vers page d'accueil de FishEye">
-        <img src="images/logo/fisheye-logo.png" id="logo" alt="logo de FishEye"/>
+        <img src="src/image/logo/fisheye-logo.png" id="logo" alt="logo de FishEye"/>
       </a>
       <nav>
-          <ul id="tag-nav">
-              <li><a class="tag" href= "tag-portrait" id="portrait"><span>#portrait</span></a></li>
+          <ul class="Tags-nav">
+          <!--<li><a class="tag" href= "tag-portrait" id="portrait"><span>#portrait</span></a></li>
               <li><a class="tag" href= "tag-art" id="art"><span>#art</span></a></li>
               <li><a class="tag" href= "tag-fashion" id="fashion"><span>#fashion</span></a></li>
               <li><a class="tag" href= "tag-architecture" id="architecture"><span>#architecture</span></a></li>
@@ -28,7 +28,7 @@
               <li><a class="tag" href= "tag-sport" id="sport"><span>#sport</span></a></li>
               <li><a class="tag" href= "tag-animals" id="animals"><span>#animals</span></a></li>
               <li><a class="tag" href= "tag-events" id="events"><span>#events</span></a></li>
-              <!--background: url(Architecture - Horseshoe.jpg);
+              background: url(Architecture - Horseshoe.jpg);
               background: url(Fashion - Melody Red on Stripes.jpg);
               background: url(Portrait-Nora.jpg);
               background: url(Fashion - Urban Jungle.jpg);
@@ -39,23 +39,24 @@
 
     <aside><h1>Nos photographes</h1></aside>
     </header>
-
+    <button>
     <a href="#"class="scroll">passer au contenu</a> <!--scroll utile en format mobile-->
- 
+    </button>
     <main class="accueil" id="main">
      <div id="list"> <!-- mon conteneur pour les photographes featured-->
         <!-- Les articles sont insérés ici par le javascript -->
       </div>  
     </main><!--contenant de tous les "articles"(card)= photographes crées en js sur fetch1.js-->
-
-    <script type="text/javascript" src="fetch1.js"></script>
-    <script type="text/javascript" src="detail.js"></script>
-   
-    <!-- <script type="text/javascript" src="Photographer.js"></script>
+    
+    <script type="text/javascript" src="src/script/fetch1.js"></script>
+    <script type="text/javascript" src="src/script/detail.js"></script>
+    <script type="text/javascript" src="src/script/fetch.js"></script>
+    
+  <!--   <script type="text/javascript" src="Photographer.js"></script>
     <script type="text/javascript" src="List.js"></script>
     <script type="text/javascript" src="script.js"></script>
     <script type="text/javascript" src="detail.js"></script>
-    <script type="text/javascript" src="tags.js"></script>
-     -->
+   
+  -->   
 </body>      
 </html>

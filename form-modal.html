@@ -1,0 +1,52 @@
+<!DOCTYPE html><!--I am the right html-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>form-modal</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" href="src/style/form-modal.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+      href="https://fonts.googleapis.com/css?family=DM+Sans"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main>
+        
+<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Contactez-moi</button>
+
+<div id="id01" class="modal">
+  
+  <form class="modal-content animate" action="/action_page.php" method="post">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+     <h1>Contactez-moi<br>
+       Mimi keel</h1>
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Prénom</b></label>
+      <input type="text" name="Prénom" required>
+
+      <label for="uname"><b>Nom</b></label>
+      <input type="text" name="Nom" required>
+
+      <label for="email"><b>Email</b></label>
+      <input type="text" name="Email" required>
+        
+      <label for="psw"><b>Message</b></label>
+      <input type="text" name="Message" id="Message" required>
+      
+    </div>
+
+    <div class="container">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Envoyer</button>
+    </div>
+  </form>
+</div>
+
+<script type="text/javascript" src="src/script/photographer-page.js"></script>
+<script type="text/javascript" src="src/script/form-modal.js"></script>
+</body>
+</html>
