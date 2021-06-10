@@ -16,60 +16,6 @@ fetch('data/FishEyeData.json')
     console.log('erreur : ' + err);
 });
 
-
-// Contient la liste des photographes sous forme d'array et qui sera utilisé dans l'objet Photographers
-var photographerList = new Array;
-
-class Photographers {
-    constructor() {
-    }
-
-    getPhotographers() {
-        return this.photographerList;
-    }
-
-    setPhotographers(photographerList) {
-        this.photographerList = photographerList;
-    }
-
-    // Permet d'obtenir les photographes ayant un tag identique
-    getPhotographersByTag(p_tag) {
-        var p_byTagList = new Array;
-
-        for (property in photographerList) {
-            // console.log(photographerList[property].p_tags);
-
-            var tags = new Array;
-            tags = photographerList[property].p_tags;
-
-            for (tag of tags) {
-                // console.log("tag: " + tag);
-
-                if (p_tag == tag) {
-                    p_byTagList.push(photographerList[property]);
-                }
-            }
-        }
-
-        return p_byTagList;
-    }
-
-    // Permet d'obtenir les photographes ayant un tag identique
-    getPhotographerById(pid) {
-        for (property in photographerList) {
-            // console.log(photographerList[property].p_id);
-    
-            var p_id = photographerList[property].p_id;
-
-            if (p_id == pid) {
-                console.log("Found photographer by id:" + p_id);
-                return photographerList[property];
-            }
-        }
-        return null;
-    }
-}
-
 var p_id;
 var p_name;
 var p_price;
@@ -150,203 +96,7 @@ class Photographer {
 // Contient la liste des médias sous forme d'array et qui sera utilisé dans l'objet Medias
 var mediaList = new Array;
 
-// Objet Medias
-class Medias {
-    constructor() {
-    }
 
-    getMedias() {
-        return this.mediaList;
-    }
-
-    setMedias(mediaList) {
-        this.mediaList = mediaList;
-    }
-
-    // Permet d'obtenir tous les médias d'un photographe
-    getMediasByPhotographerId(p_id) {
-        var m_byPhotographerIdList = new Array;
-
-        for (property in mediaList) {
-            // console.log(mediaList[property]);
-
-            if (p_id == mediaList[property].m_p_id) {
-                m_byPhotographerIdList.push(mediaList[property]);
-            }
-        }
-
-        return m_byPhotographerIdList;
-    }
-
-    // Permet d'obtenir un média à partir de son identifiant
-    getMediaById(m_id) {
-        var m_byMediaIdList = new Array;
-
-        for (property in mediaList) {
-            if (m_id == mediaList[property].m_id) {
-                m_byMediaIdList.push(mediaList[property]);
-            }
-        }
-
-        return m_byMediaIdList;
-    }
-
-    // Permet d'obtenir tous les médias ayant un tag identique
-    getMediasByTag(m_tag) {
-        var m_byTagList = new Array;
-
-        for (property in mediaList) {
-            // console.log(mediaList[property].m_tags);
-
-            var tags = new Array;
-            tags = mediaList[property].m_tags;
-
-            for (tag of tags) {
-                // console.log("tag: " + tag);
-
-                if (m_tag == tag) {
-                    m_byTagList.push(mediaList[property]);
-                }
-            }
-        }
-
-        return m_byTagList;
-    }
-
-    // Permet de trier les médias d'un photographe par rapport à ses likes
-    orderPhotographerMediasByLikes(p_id) {
-        var m_orderBy = new Array;
-        var sortable = new Array;
-
-        // console.log("likes before sort:");
-
-        // On parcours la liste des médias
-        for (property in mediaList) {
-            // console.log(mediaList[property].m_p_id);
-
-            media = mediaList[property];
-
-            m_likes = media.m_likes;
-            m_p_id = media.m_p_id;
-            m_id = media.m_id;
-
-            // On vérifie si le média appartient au photographe en question (paramètre de la fonction)
-            if (p_id == m_p_id) {
-                // console.log(m_likes);
-                sortable.push({m_id, m_likes});
-            }
-        }
-
-        sortable.sort(function(a, b) {
-            if(a.m_likes < b.m_likes) return -1;
-            if(a.m_likes > b.m_likes) return 1;
-            return 0;
-        })
-
-        console.log(sortable.constructor.name);
-        console.log(sortable.length);
-
-        // console.log("likes after sort:");
-        sortable.forEach(function(currentValue) {
-            // console.log(currentValue.m_id);
-            m_orderBy.push(medias.getMediaById(currentValue.m_id));
-            // console.log(m_orderBy);
-        });
-
-        // On renvoi la liste des médias triée
-        return m_orderBy;
-    }
-
-    // Permet de trier les médias d'un photographe par rapport à leurs titres
-    orderPhotographerMediasByName(p_id) {
-        var m_orderBy = new Array;
-        var sortable = new Array;
-    
-        // console.log("title before sort:");
-    
-        // On parcours la liste des médias
-        for (property in mediaList) {
-            // console.log(mediaList[property].m_p_id);
-    
-            media = mediaList[property];
-    
-            m_title = media.m_title;
-            m_p_id = media.m_p_id;
-            m_id = media.m_id;
-    
-             // On vérifie si le média appartient au photographe en question (paramètre de la fonction)
-            if (p_id == m_p_id) {
-                // console.log(m_title);
-                sortable.push({m_id, m_title});
-            }
-        }
-    
-        // On ne converti pas le titre par rapport au format (le nom des fichiers étant en anglas, pas de problème d'accents)
-        sortable.sort(function(a, b) {
-            if(a.m_title < b.m_title) return -1;
-            if(a.m_title > b.m_title) return 1;
-            return 0;
-        })
-    
-        console.log(sortable.constructor.name);
-        console.log(sortable.length);
-    
-        // console.log("title after sort:");
-        sortable.forEach(function(currentValue) {
-            // console.log(currentValue.m_id);
-            m_orderBy.push(medias.getMediaById(currentValue.m_id));
-            // console.log(m_orderBy);
-        });
-    
-        // On renvoi la liste des médias triée
-        return m_orderBy;
-    }
-
-       // Permet de trier les médias d'un photographe par rapport à leurs dates
-       orderPhotographerMediasByDate(p_id) {
-        var m_orderBy = new Array;
-        var sortable = new Array;
-    
-        // console.log("date before sort:");
-    
-        // On parcours la liste des médias
-        for (property in mediaList) {
-            // console.log(mediaList[property].m_p_id);
-    
-            media = mediaList[property];
-    
-            // Aucun traitement sur le format de la date, il est du type YYYY-MM-DD qui peut être trié dans le bon ordre
-            m_date = media.m_date;
-            m_p_id = media.m_p_id;
-            m_id = media.m_id;
-    
-             // On vérifie si le média appartient au photographe en question (paramètre de la fonction)
-            if (p_id == m_p_id) {
-                // console.log(m_date);
-                sortable.push({m_id, m_date});
-            }
-        }
-    
-        sortable.sort(function(a, b) {
-            if(a.m_date < b.m_date) return -1;
-            if(a.m_date > b.m_date) return 1;
-            return 0;
-        })
-    
-        console.log(sortable.constructor.name);
-        console.log(sortable.length);
-    
-        // console.log("date after sort:");
-        sortable.forEach(function(currentValue) {
-            // console.log(currentValue.m_id);
-            m_orderBy.push(medias.getMediaById(currentValue.m_id));
-            // console.log(m_orderBy);
-        });
-    
-        // On renvoi la liste des médias triée
-        return m_orderBy;
-    }
-}
 
 var m_id;
 var m_p_id;
@@ -466,13 +216,8 @@ function fetchData(data) {
 
         var p = photographersData[i];
 
-        // On récupère les attributs de chaque photographe
-        p_id = p.id;
-        p_name = p.name;
-        p_price = p.price;
-        p_tagline = p.tagline;
-        p_location = p.city + ", " + p.country;
-        p_portrait = p.portrait;
+       // Création de l'instance Photographer
+       photographer = new Photographer(p_id, p_name, p_price, p_tags, p_tagline ,p_location, p_portrait);
 
         /*
         console.log("p_id: " + p_id);
@@ -489,21 +234,6 @@ function fetchData(data) {
             // console.log("p_tag: " + tag);
             p_tags.push(tag);
         }
-
-        // Création de l'instance Photographer
-        photographer = new Photographer(p_id, p_name, p_price, p_tags, p_tagline ,p_location, p_portrait);
-
-        /*
-        console.log('p_id: ' + photographer.getP_id());
-        console.log('p_name: ' + photographer.getP_name());
-        console.log('p_price: ' + photographer.getP_price());
-        console.log('p_tagline: ' + photographer.getP_tagline());
-        console.log('p_location: ' + photographer.getP_location());
-        console.log('p_portrait: ' + photographer.getP_portrait());
-        for (tag in photographer.getP_tags()) {
-            console.log('p_tag: ' + tag);
-        }
-        */
 
         /*
         for (property in photographer) {
@@ -771,13 +501,13 @@ function fetchData(data) {
 
     var btn = document.createElement("button");
     btn.innerText="Popularité";
-    btn.setAttribute('onClick', "myFunction()");
+    btn.addEventListener("click",myfunction);
     btn.setAttribute('class', "dropbtn");
     dropdown.appendChild(btn);
 
     var btn = document.createElement("button");
     btn.innerText="Engagez-moi";
-    btn.setAttribute('onClick', "myFunction()");
+    btn.addEventListener("click",myfunction);
     btn.setAttribute('class', "dropbtn");
     dropdown.appendChild(btn);
 
@@ -807,7 +537,7 @@ function fetchData(data) {
     
     var btn = document.createElement("button");
     btn.innerText="Contactez-moi";
-    btn.setAttribute('onClick', "myFunction()");
+    btn.addEventListener("click",myfunction);
     btn.setAttribute('class', "dropbtn");
     dropdown.appendChild(btn);
 
@@ -826,7 +556,7 @@ function myFunction() {
 }
   
 // Close the dropdown if the user clicks outside of it
-window.onclick = function(event) {
+window.click = function(event) {
     if (!event.target.matches('.dropbtn')) {
         var dropdowns = document.getElementsByClassName("dropdown-content");
         var i;
@@ -936,7 +666,7 @@ function displayMedia(pgmdList, p_name) {
 /*  Effacez la section(article), puis créez une <media-card> pour chaque média (essai  à adapter)
 */
 /* Insérez un modèle vide, puis appelez render() essai
-     */
+     
 function connectedCallback () {
         const template = document.createElement('template');
         template.innerHTML = `
@@ -958,5 +688,5 @@ function render() {
         });
         this.activeCurrent();
     }
-
+*/
  

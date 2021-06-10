@@ -2,7 +2,7 @@
 /**
  * A component with all the tags, displayed on the index and on the tag pages 
  */
- export class TagsNav extends HTMLElement {
+ class TagsNav extends HTMLElement {
     constructor() {
         super();
     }
@@ -66,7 +66,7 @@
 
 
 
-/*
+
 const tagsList = document.querySelector('tag-nav');
 
 fetch('data/FishEyeData.json') // demande de récuperation pour charger le fichier 
@@ -135,5 +135,5 @@ function appendData(data) {
   
 
 };
-*/
+
 

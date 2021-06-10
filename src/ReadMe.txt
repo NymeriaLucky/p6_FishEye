@@ -26,5 +26,6 @@ situation de handicap.
 Objectif : Faire en fonction de mes connaissances.
 Il y a beaucoup à apprendre, s'appuyer sur beaucoup de ressources externes pour trouver les solutions les plus pertinentes.
  
-Ce projet est difficile mais cela reste gratifiant de trouver une solution à chaque features.
 
+https://nymerialucky.github.io/p6_FishEye/ : GithubPage
+lien répo : https://github.com/NymeriaLucky/p6_FishEye
