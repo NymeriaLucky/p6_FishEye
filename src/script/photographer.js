@@ -1,5 +1,6 @@
 
 
+//user page
 //recherche l'url de tous les photographes ? faut-il refaire pour chacun ?
 const searchParam = (new URL(window.location)).searchParams; // parse l'url de la page et récupère l'ensemble des paramètres
 const photographId = searchParam.get('id'); // récupère la valeur du paramètre nommé 'id'

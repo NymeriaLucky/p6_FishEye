@@ -97,7 +97,6 @@ class Photographer {
 var mediaList = new Array;
 
 
-
 var m_id;
 var m_p_id;
 var m_image;

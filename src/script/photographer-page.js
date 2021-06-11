@@ -20,6 +20,7 @@
     
     return Page;
 }
+
 //filtrer les éléments de l'article réutilisés et appelés dans la page
 let photographerCard = [name,id,city,country,tags,tagline, portrait];
 
@@ -43,9 +44,9 @@ function appendData(data) {
   var medias = data.media;
 
   var photographersTagsBox = document.getElementById('tagsbox');
-    var listPhotograph = document.getElementById('list'); // mes instructions sur les données
+  var listPhotograph = document.getElementById('list'); // mes instructions sur les données
     
-    var photographerCard = document.createElement("photographer-card");
+  var photographerCard = document.createElement("photographer-card");
 
     for (photographer of photographers) {
       // for (var i = 0; i < photographers.length; i++) {
@@ -152,8 +153,9 @@ Le nombre entre parenthèse étant un délai choisi par toi*/
 
  //autre essai
  // Un composant qui affichera tous les médias du photographe sur sa page
+var PhotographerMedias = new(PhotographerMedias)
  
-export class PhotographerMedias extends HTMLElement {
+class PhotographerMedias extends HTMLElement {
   constructor() {
       super();
       // obtenir l'identifiant du photographe à partir de l'url
