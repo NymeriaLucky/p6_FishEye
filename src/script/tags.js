@@ -1,4 +1,5 @@
-/*fetch('FishEyeData.json') // demande de récuperation pour charger le fichier question
+fetch('FishEyeData.json') // demande de récuperation pour charger le fichier question
+import { Photographers } from './photographer';
 .then(function (response) {
     return response.json();
 })
@@ -9,18 +10,17 @@
     console.log('erreur : ' + err);
 });
 
-
 function appendData(data){
     var tags = data.tags;
-    var photographersTagsBox = document.getElementById('tag-nav');
-const array1 = [243, 82, 925, 930, 527, 195];//id respectif des photographes, array2=medias
-const found = array1.find(tags => photographers == 8);
+    var photographersTagsBox = document.getElementById('tagsbox');
+
+const found = array.find(tags => photographers == 8);
 
 console.log(found);
 // a adapter pour récupérer les infos du photographe dans le tableau photographers venant du json, où mettre cette commande?
 
 /*et dans le tableau media du json, de récupérer les médias qui appartiennent aux photographes 
-avec array.filter en adaptant suivant besoin:*
+avec array.filter en adaptant suivant besoin:*/
 const tags = ['#portrait', '#art', '#fashion', '#architecture', '#travel', '#sport', '#animals', '#events'];
 
 const result = tags.filter(tags => tags.length == 8);
@@ -28,17 +28,18 @@ const result = tags.filter(tags => tags.length == 8);
 console.log(result);
 
 for (tags of photographers) {
+    var tagsbox = document.createElement("tagsbox")//nom donné aux tags personnels du photographe
     var photographersTagsBox = document.createElement("photographerTagsBox")// tableau tous tags 
     var tagNav = document.createElement("tag-nav")//espace de stockage de la liste 
     var tag = document.createElement("tag"); // element du tableau li
     var ul = document.createElement("ul")//contenant de la liste
     var li = document.createElement("li")//contenant de l'élément #tag
-    var tags = document. createElement("tagList")
+    var tags = document. createElement("tagsbox")
 
 
     var tag = photographers.tag;
-    var photographersTagsBox =  photographers.photographersTagsBox;
-    var tagList = "photographersTagsBox";
+    var photographersTagsBox =  photographers.tagsbox;
+    var tagsbox= "photographersTagsBox";
 
     tagNav.innerText = tagList;
     tagNav.appendChild(tag)
@@ -55,7 +56,7 @@ for (tags of photographers) {
      * @returns {array} - all the photographers tagged
      *
      getPhotographersTagsbox(tagList) {
-        // return all the photographers from the JSON whose tags include the looked tag
+        // renvoie tous les photographes du JSON dont les balises incluent la balise lookée
         return data.photographers.filter(photographer => photographer.tags.includes(tag));
     }
 }
@@ -77,16 +78,7 @@ for (tags of photographers) {
 
     for (photographer of photographers) {
         */
-fetch('FishEyeData.json') // demande de récuperation pour charger le fichier question
-      .then(function (response) {
-  return response.json();
-  })
-      .then(function(data) {
-  appendData(data);
-      })
-      .catch(function(err) {
-  console.log('erreur : ' + err);
-      });
+
 
 
   function appendData(data){
@@ -166,7 +158,7 @@ var tagNav = class {
 function showArray(dat
 
 fetch ('FishEyeData.json'){
-        let tagNav = document.getElementById('tag-nav');
+        let tagNav = document.getElementById('photographer');
           for(let value of data){
                   tagNav.innerHTML += value;
           }

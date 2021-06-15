@@ -47,6 +47,16 @@ button{/*rectangle 2*/
   
 .show {display: block;}
 
+/* .logo */
+#logo{
+    width: 210px;
+    height: 3rem;
+    left: 5px;
+    top:2px;
+    justify-content: flex-start;
+    position: absolute;
+  }  
+
 img{
 border-radius: 50%;
 }

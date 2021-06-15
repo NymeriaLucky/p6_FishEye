@@ -3,7 +3,7 @@
      * @param {string} url - the user's request 
      * @returns {object} - a page, will be registered as this.currentPage in the router
      */
-  createPage(url) {
+  createPage(url) 
     let Page;
 
     if (url == '/') {
@@ -18,11 +18,34 @@
 
     Page.url = url;
     
-    return Page;
-}
+    console.log(Page);
 
-//filtrer les éléments de l'article réutilisés et appelés dans la page
-let photographerCard = [name,id,city,country,tags,tagline, portrait];
+
+const queryString = window.location.search;
+console.log("queryString : " + queryString);
+const urlParams = new URLSearchParams(queryString);
+const idParam = urlParams.get("id");
+console.log("id param : " + idParam);
+
+fetch('FishEyeData.json')
+.then(function (response) {
+    return response.json();
+})
+.then(function(data) {
+    mediaList = fetchData(data); // list contient un array d'objets media
+})
+.catch(function(err) {
+    console.log('erreur : ' + err);
+});
+
+var p_id;
+var p_name;
+var p_button;
+var p_tags = new Array;
+var p_tagline;
+var p_location;
+var p_portrait;
+
 
 function showArray(data){
 	let article = document.getElementById("article");
@@ -84,7 +107,6 @@ function appendData(data) {
 }
 
 }
-
 //ouverture de la modal formulaire dans la page des photographes.
 let testForm = document.querySelectorAll(".pp_contact");
 let ouverture = document.querySelector(".form_modal");
@@ -98,11 +120,7 @@ function launchModal() {
 Si tu veux faire des transitions tu peux aussi jouer avec ça : 
 Fermeture : $("#monIdDeModalAFermer").fadeOut(5000),
 Ouverture :$("#monIdDemodalAOuvrir").fadeIn(2500),
-
 Le nombre entre parenthèse étant un délai choisi par toi*/
-
-
-
 
 //essai myriam :
 // factory pattern , fonction pour filtrer les images du photographe suivant le tag et id
@@ -150,23 +168,15 @@ Le nombre entre parenthèse étant un délai choisi par toi*/
  photographerId.showArray(data);
 
 
-
  //autre essai
  // Un composant qui affichera tous les médias du photographe sur sa page
 var PhotographerMedias = new(PhotographerMedias)
  
-class PhotographerMedias extends HTMLElement {
-  constructor() {
-      super();
-      // obtenir l'identifiant du photographe à partir de l'url
-      this.id = window.history.state.url.slice(5);
-      // obtenir les médias des photographes
-      this.medias = this.getMedias(this.id);
-  }
+
   /**
    * Insérez un modèle, puis appelez short() & render() & listenSort
    */
-  connectedCallback () {
+  connectedCallback () 
       const template = document.createElement('template');
       template.innerHTML = `
       <section class="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-4">
@@ -176,23 +186,22 @@ class PhotographerMedias extends HTMLElement {
       this.sort("date");
       this.render();
       this.listenSort();
-  }
+  
   /**
    *  Effacez la section, puis créez une <media-card> pour chaque média
    */
-  render() {
+  render() 
       this.querySelector("section").innerHTML = "";
       this.medias.forEach(media => {
           this.querySelector("section").insertAdjacentHTML('beforeEnd', 
           '<media-card id="num' + media.id + '"></media-card>');
       });
-  }
+  
 
-  /**
-   *Boutton trier les médias par date, likes ou titre
-   * @param {sting} value - parameters of sorting
-   */
-  sort(value) {
+  /*
+   Boutton trier les médias par date, likes ou titre*/
+    @param {sting} value - parameters of sorting
+  sort(value) 
       switch (value) {
           case "date":
               this.medias.sort((m1, m2) => {
@@ -214,34 +223,28 @@ class PhotographerMedias extends HTMLElement {
               console.error("Oops");
               break;
       }
-  }
+  };
 
   /**
    * Écoutez le composant <medias-select> et sort() lorsqu'un paramètre de tri est sélectionné
    */
-   listenSort() {
+   listenSort() 
       document.getElementById("sortMedias").addEventListener('change', select => {
           this.sort(select.target.value)
           this.render();
       })
-  }
+  
 
-  /**
-   * A partir d'un ID retourner un tableau avec tous les médias du photographe depuis le JSON
-   * @param {integer} id - id du photographer
-   * @returns {array} - les medias du photographe
-   */
+  /*
+   A partir d'un ID retourner un tableau avec tous les médias du photographe depuis le JSON*/
+    @param {integer} id - id du photographer
+    @returns {array} - les medias du photographe
+   
 
-  getMedias(id) {
+  getMedias(id) 
       // renvoyer le photographe dans le JSON dont l'identifiant correspond à l'identifiant demandé
-      return data.media.filter(media => media.photographerId == id);
-  }
-
-}
-
-// Importer des données depuis le JSON
-import data from '../../../FishEyeData.json'
-
+      console.log( data.media.filter(media => media.photographerId == id));
+  
 
 // Get the modal
 var modal = document.getElementById('id01');
@@ -266,13 +269,78 @@ fetch("FishEyeData.json")
                         })
                     });
                     
-let childElement = document.createElement("article");
-            childElement.classList.add("pictures__picture");
-
-            childElement.innerHTML = `
-              <figure class="photo">
-                  <a href="assets/images/pictures/${media.url}" type="${media.type}">
-                       ${thumbnail}
+let childElement = document.createElement("Photograph-header");
+            childElement PhotographerHeader= new PhotographerHeader;
+            class PhotographerHeader{//Uncaught SyntaxError : identifiant inattendu ?
+                constructor(p_id, p_name,p_button, p_tags, p_tagline, p_location, p_portrait){
+                   this.p_id =p_id;
+                   this.p_name=p_name;
+                   this.p_location=p_location;
+                   this.p_tagline=p_tagline;
+                   this.tags=p_tags;
+                   this.button=p_button;
+                   this.portrait=p_portrait;
+                }
+             }
+             getP_id() {
+                return this.p_id;
+            }
+            
+            setP_id(p_id) {
+                this.p_id = p_id;    
+            }
+            
+            getP_name() {
+                return this.p_name;
+            }
+            
+            setP_name(p_name) {
+                this.p_name = p_name;    
+            }
+            
+            getP_price() {
+                return this.p_button;
+            }
+            
+            setP_price(p_button) {
+                this.p_button = p_button;    
+            }
+            
+            getP_tags() {
+                return this.p_tags;
+            }
+            
+            setP_tags(p_tags) {
+                this.p_tags = p_tags;    
+            }
+            
+            getP_tagline() {
+                return this.p_tagline;
+            }
+            
+            setP_tagline(p_tagline) {
+                this.p_tagline = p_tagline;    
+            }
+            
+            getP_location() {
+                return this.p_location;
+            }
+            
+            setP_location(p_location) {
+                this.p_location = p_location;    
+            }
+            
+            getP_portrait() {
+                return this.p_portrait;
+            }
+            
+            setP_portrait(p_portrait) {
+                this.p_portrait = p_portrait;    
+            }
+            }
+                
+            
+            ${thumbnail}//likes
                   </a>
                   <figcaption class="photo__details">
                        <h2 class="photo-title">${media.name}</h2> 
@@ -284,4 +352,31 @@ let childElement = document.createElement("article");
 
 parentElement.appendChild(childElement); 
                   }
-                });                               
+                }); 
+ //Pour les likes des photographes :
+<a
+          aria-hidden="false"
+          class="heart"
+          focusable="true"
+          role="img"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 512 512"          
+        >
+          <title>Coeur</title>
+          <desc>la forme d'un coeur dessiné simplement</desc>
+          <path
+            d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"
+          />
+        </a> 
+        
+        function store() {
+            var favItem = document.getElementsByClassName('favorite');
+            var favorites =[];
+            var fav = favItem.children;
+            favorites.push(fav);
+            console.log(favItem);
+            console.log(favorites);
+        }
+        document.querySelectorAll(".favorite").forEach(item => {
+            item.addEventListener("click", store);
+        });    

@@ -1,5 +1,5 @@
 
-fetch('data/FishEyeData.json') // demande de récuperation pour charger le fichier 
+fetch('FishEyeData.json') // demande de récuperation pour charger le fichier 
 .then(function (response) {
     return response.json();
 })
@@ -18,7 +18,7 @@ function appendData(data) {
     // Traitement de l'array "media" (à déplacer)
     // var medias = data.media;
 
-    // var photographersTagsBox = document.getElementById('tagsbox');
+    var photographersTagsBox = document.getElementById('tagsbox');
     var listPhotograph = document.getElementById('list'); // mes instructions sur les données
       
     var photographerCard = document.createElement("photographer-card");
@@ -87,7 +87,7 @@ function appendData(data) {
         
         a.title = name;
         // a.innerHTML = "Fiche détaillée";
-        a.href = "detail.html?id=" + id;
+        a.href = "src/detail.html?id=" + id;
         // a.setAttribute('href', "detail.html?id=" + id);
         // article.appendChild(a);
 
@@ -120,7 +120,7 @@ function appendData(data) {
         var tagList = "";
         for (tag of itags) {
           console.log("tag: " + tag);
-          tagList = tagList + " " + tag;
+          tagList= tagList + " " + tag;
         }
         
         tags.innerText = tagList;

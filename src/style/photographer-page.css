@@ -25,7 +25,15 @@ top: 43px;
     border-radius: 5px;
     background: #FAFAFA;
     }
-    
+ 
+form{
+    height: 900px;
+width: 669px;
+left: 0px;
+top: 0px;
+border-radius: 5px;
+
+}    
 /* Group */
 
 position: absolute;

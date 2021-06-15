@@ -7,13 +7,10 @@ const photographId = searchParam.get('id'); // récupère la valeur du paramètr
 return(URL);
 
 
-
-
-
  // Contient la liste des photographes sous forme d'array et qui sera utilisé dans l'objet Photographers
 var photographerList = new Array;
 
-class Photographers {
+export class Photographers {
     constructor() {
     }
 

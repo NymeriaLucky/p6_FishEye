@@ -35,7 +35,7 @@ import {MediaLightbox} from './script/media-lightbox.js'//diaporama
 MediaLightbox();
 import {MediasSelect} from './script/medias-select.js'
 ('medias-select', MediasSelect());//selection de medias
-import {PhotographerInfos} from './script/photographer-infos.js'//liste
+import {PhotographerInfos} from './script/photographer-infos.js'//liste users
 ('photographer-infos', PhotographerInfos());
 import {PhotographerMedias} from './script/photographer-medias.js'
 ('photographer-medias', PhotographerMedias());
@@ -50,13 +50,14 @@ Fetch1();
 // Import all the pages/components/index composants
 import {FeaturedPhotographers} from './index/featured-photographers.js'
 ('featured-photographers', FeaturedPhotographers());
-import {ReturnTop} from './pages/components/index/return-top.js'//(detail.js ou fetch1)
+import {ReturnTop} from '.script/index/return-top.js'//(detail.js ou fetch1)
 ('return-top', ReturnTop());//a revoir
 // Import all the pages/components/tag composants
 import {TaggedPhotographers} from './script/tagged-photographers.js'//defini le photographe suivant le tag
 ('tagged-photographers', TaggedPhotographers());
 /* reste à faire
  * -error page404 ?
+ exemple :import { name, draw, reportArea, reportPerimeter } from './modules/square.mjs';
  */
 
 

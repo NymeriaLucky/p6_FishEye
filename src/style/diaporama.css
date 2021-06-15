@@ -10,10 +10,10 @@ main{
 }
 
 .diapo {/*thumb-image*/
-    display:flex;
+    position: static;
+    display: flex;
     position: relative;
-    overflow: hidden;
-    width: 100%;
+    overflow: hidden;   
     left: 0px;
     top: 0px;
     border-radius: 5px;
@@ -21,6 +21,8 @@ main{
     flex-grow: 1;
     overflow:auto ;
     zoom:normal;
+    height: 900px;
+    width: 1050px;    
 }
 
 #nav-droite, #nav-gauche{
@@ -34,6 +36,7 @@ main{
 #nav-droite{
     right: 20px;
 }
+
 #nav-gauche{
     left: 20px;
 }
@@ -52,7 +55,7 @@ main{
     width: 100%;
 }
 
-.caption{
+.caption {
     width: 600px;
     opacity: 0;
     position: absolute;
@@ -62,13 +65,14 @@ main{
     text-align: center;
     background-color: rgba(255,255,255,0.4);
     padding: 30px;
-    flex-direction: row;   
+    flex-direction: row;  
 }
+
 p {
     height: 31px;
    width: 292px;
     left: 195px;
-    top: 310px;
+    top: 974px;
     font-family: DM Sans;
     font-size: 24px;
     font-style: normal;
@@ -78,5 +82,18 @@ p {
     text-align: left;
     text-align: left;
     color:#901C1C;
+    position: absolute;
+left: 13.54%;
+right: 66.18%;
+top: 95.12%;
+bottom: 1.86%;
+
+font-family: DM Sans;
+font-style: normal;
+font-weight: normal;
+font-size: 24px;
+line-height: 31px;
+
 }
+ 
 /*reste à adapter iPhone 11 pro/X3*/

@@ -1,4 +1,4 @@
-
+// all users
 const photographerId = [243, 930, 82, 527, 925, 195];
 
 const found = photographerId.filter(photographerId => FishEyeData.json > 6);
@@ -36,9 +36,6 @@ function showPhotographer(data){
   }
 }
 showArray(array);
-
-
-
 
 /*
 a développer :

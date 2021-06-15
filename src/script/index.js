@@ -6,7 +6,7 @@ export class IndexPage extends HTMLElement {
    } 
    
 
-fetch("data/FishEyeData.json")
+fetch("FishEyeData.json")
             .then(res => res.json())
             .then(jsonData => {
             console.log(jsonData)
