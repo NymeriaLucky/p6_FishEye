@@ -262,7 +262,7 @@ function fetchData(data) {
     */
 
     // TODO : Utilser la fonction de tri par Title/Date/Likes quand on sélectionne un élément de la dropdown
-
+ 
     var dropdown = document.getElementById('dropdown');
 
     var btn = document.createElement("button");
@@ -282,7 +282,8 @@ function fetchData(data) {
     myDropdown.setAttribute('id', "myDropdown");
     dropdown.appendChild(myDropdown);
 
-    // const sortCriteria = 
+  
+   // const sortCriteria = 
     var likesCriteria = document.createElement("a");
     likesCriteria.innerText = "Popularité";
     likesCriteria.href = "javascript:medias.orderPhotographerMediasByLikes(" + idParam + ")";
@@ -426,11 +427,14 @@ function displayMedia(pgmdList, p_name) {
         var likes = document.createElement("span");
         likes.innerText = "Likes : " + md.getM_likes();
         article.appendChild(likes);
+
+
+
     }
 }
 
-/*  Effacez la section(article), puis créez une <media-card> pour chaque média (essai  à adapter)
-*/
+//  Effacez la section(article), puis créez une <media-card> pour chaque média (essai  à adapter)
+
 /* Insérez un modèle vide, puis appelez render() essai
      
 function connectedCallback () {

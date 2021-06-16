@@ -10,13 +10,17 @@ class Media {//media-card
         this.m_likes = m_likes;
         this.m_date = m_date;
         this.m_price = m_price;
-        this.log = function(){
-    let media = new Media();
+    this.log = function(){
+    var media = new Media();
     console.log(media+""+"this.m_id" - "this.m_p_id" -"this.m_image" -"this.m_video" - "this.m_title"
    - "this.m_tags" - "this.m_likes" - "this.m_date" - "this.m_price"); 
 }
-
-
+    this.display=function( {
+    var media = new Media();
+    return"<div class='media-card'>"+media+" "this.m_id"+"this.m_p_id"<img src='"+this.m_image"'><video controls poster='"+this.m_video"'>
+    </div>";
+     }
+}
 console.log('*********************************** Medias *************************************');
 
     // Liste des médias au format JSON
@@ -111,4 +115,4 @@ console.log('*********************************** Medias ************************
     for (property in medias) {
         console.log(medias[property]);
     }
-    
+}

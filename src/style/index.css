@@ -46,23 +46,22 @@ header {
 h1 {
   --tw-text-opacity: 1;
   color: rgba(144,28,28,var(--tw-text-opacity));
-  line-height: 1.75rem;
   width: 306px;
-  height: 48px;
   position: absolute;
   font-family: DM Sans;
-  left: 1033px;
-  right:-22%;
-  top: 5px;
+  left: 1085px;
+  top: 8px;
   bottom: 0%;
-  text-align: right;
   flex-grow: 1;
   order: 2;
   display: block;
-  font-size: 2em;
-  font-weight: bold;
-  margin-block-start: 0.67em; 
+  font-weight: normal;
+  margin-block-start: 0.67em;
+  writing-mode: horizontal-tb;
   font-size: 36px;
+  line-height: 47px;
+  font-size:1.2em;
+  align-content: right;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -79,29 +78,31 @@ text-align: center;
 flex-wrap: wrap;
 }
 
-#tag-nav{ /* Rectangle 246 photographerstagBox*/
+#Tags-nav{ /* Rectangle 246 photographerstagBox*/
   text-align: center;
   display: flex;
-  justify-content:space-around;
-  position: absolute;
+  position: static;
   width: 553px;
   height: 49px;
   left: 388px;
-  box-sizing: border-box;
+  box-sizing: content-box;
   align-content: start;
-  margin:10px;
-  margin:0;
-  list-style: none;
+  margin:5px;
+  top:5%;
+  padding-left:40%;
+  padding-right:40%;
   }
-/*
+
   ul{
     display: flex;
     margin:0;
     padding:0;
     justify-content: space-between;
-    align-items: center;   
-  }*/
-.tag{/*.photographer_cathegories #Portrait #Art #Fashion #Architecture #Travel #Sport #Animals #Events buttons*/
+    align-items: center;
+    list-style: none;
+      
+  }
+.tag {/*.photographer_cathegories #Portrait #Art #Fashion #Architecture #Travel #Sport #Animals #Events buttons*/
   margin-right:.25rem;
   border-radius: 9999px;
   border-width: 1px;
@@ -122,7 +123,8 @@ flex-wrap: wrap;
   color: #911C1C;
 }
 
-article tags{
+tagList, tags, photographersTagsBox{ /*tags à séparer!*/
+  justify-content: space-between;
   position: relative;
   margin-right:.25rem;
   border-radius: 9999px;
@@ -309,7 +311,7 @@ margin-bottom: 1rem;
 h5{
 color: #911C1C;
 }
-/* Ellie-Rose Wilkens */
+ Ellie-Rose Wilkens *
 #Ellie-RoseWilkens{
 position: absolute;
 left: -25%;
@@ -396,6 +398,7 @@ text-align: center;
 padding: 1%;
 height: auto;
 justify-content: center;
+margin-top:5%;
 }
 
 div{

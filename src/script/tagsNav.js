@@ -47,7 +47,6 @@
         this.appendChild(template.content);
         this.activeCurrent();
     }
-
     
  //    Si la session est dans une page de balise, activez la balise actuelle
 
@@ -61,19 +60,7 @@
         }
 }
 
-
 const tagsList = document.querySelector('tags');
-
-fetch('data/FishEyeData.json') // demande de récuperation pour charger le fichier 
-.then(function (response) {
-    return response.json();
-})
-.then(function(data) {
-  appendData(data);
-})
-.catch(function(err) {
-    console.log('erreur : ' + err);
-});
 
 
 function appendData(data) {
@@ -90,20 +77,29 @@ function appendData(data) {
     }
     
     tags.innerHTML = tagsList;
-    tag-nav.appendChild(tags);
-    tag-nav.appendChild(document.createElement("br"));
-    nav.appendChild(tag-nav);
+    Tags-nav.appendChild(tags);
+    Tags-nav.appendChild(document.createElement("br"));
+    nav.appendChild(Tags-nav);
 
 
     for (tag of pg.getP_tags()) {
         console.log(">>> tag: " + tag);
   
         var li = document.createElement("li");
-        var nav = document.createElement("tag-nav");
+        var TagsNav = document.createElement("Tags-nav");//emplacement ou vont les tags
         var a = document.createElement("a"); 
         var nav = document.createElement("nav");
-  
-        /*
+        var tags = document.createElement("tags");//tableau tags
+        
+       TagsNav.innerHTML = tagsList;
+       nav.appendChild(TagsNav)
+       li = tag;
+       li.appendChild(tag);
+      
+        a.href = "src/detail.html?id=" + id; 
+       console.log(TagsNav);
+        };
+        /* pour filter :
           <a href ="javascript:nomfonction()">Cliquez ici</a>
   
           var filteredList =  list.filter(function(value) {
@@ -116,8 +112,7 @@ function appendData(data) {
                   l.date >= 2019 &&
                   l.tag >= "sport";
           });
-        */
-  
+         
         a.title = tag;
         a.href = "javascript:filterByTag(" + tag + ")";
         a.innerText = "#" + tag;
@@ -125,10 +120,8 @@ function appendData(data) {
   
         li.appendChild(a);
   
-        tag-nav.appendChild(li);
+        Tags-nav.appendChild(li);
+        console.log(TagsNav);
       }
   
-
-};
-
-
+    };*/

@@ -1,10 +1,23 @@
 /* photographer-page */
-html{
-position: relative;
-width: 1440px;
-height: 1024px;
-background: #FFFFFF;
-}
+html {/* Index */
+    position: relative;
+    width: 1440px;
+    height: 1024px;
+    background: #FFFFFF;
+    display: block;
+    font-family: dm-sans,ui-sans-serif,verdana,system-ui;
+    line-height: 1.5;
+    tab-size: 4;
+  }
+  
+  body{/* Vector 1*/ 
+  position: absolute;
+  width: 1413.5px;
+  height: 1003.5px;
+  left: 11px;
+  top: 5px;
+  }
+
 /* .logo */
 #logo {
 border-radius: 0px;

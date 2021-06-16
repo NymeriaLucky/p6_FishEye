@@ -1,11 +1,16 @@
 
 
-//user page
+//users page
 //recherche l'url de tous les photographes ? faut-il refaire pour chacun ?
 const searchParam = (new URL(window.location)).searchParams; // parse l'url de la page et récupère l'ensemble des paramètres
 const photographId = searchParam.get('id'); // récupère la valeur du paramètre nommé 'id'
 return(URL);
 
+var URL = window.location;
+  window.location = (new URL(window.location));
+/*Renvoie un objet Location contenant des informations concernant l'URL actuelle du document et fournit des méthodes pour modifier cette URL.
+ Cette propriété peut être utilisée pour charger une autre page.
+*/
 
  // Contient la liste des photographes sous forme d'array et qui sera utilisé dans l'objet Photographers
 var photographerList = new Array;

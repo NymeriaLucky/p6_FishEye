@@ -1,4 +1,4 @@
-// Import all the pages à revoir
+// Import all the pages (à revoir)
 //* Importer toutes les dépendances et composants JavaScript(modules)
 // importer les dependences
 import "./src/style/index.css"
@@ -19,7 +19,7 @@ FormModal();
 import {lightboxModal} from './script/diaporama.js'
 lightboxModal();
 
-// Import all the pages/composants
+// Import all the pages/components(composants)
 import {FisheyeLogo} from './image/logo/logo.png'
 FisheyeLogo();
 import {TagsNav} from './script/tagNav.js'
@@ -33,13 +33,13 @@ import {Media} from './script/media.js'//media-card
 Media();
 import {MediaLightbox} from './script/media-lightbox.js'//diaporama
 MediaLightbox();
-import {MediasSelect} from './script/medias-select.js'
+import {MediasSelect} from './script/medias-select.js'// dropdown(button)
 ('medias-select', MediasSelect());//selection de medias
 import {PhotographerInfos} from './script/photographer-infos.js'//liste users
 ('photographer-infos', PhotographerInfos());
 import {PhotographerMedias} from './script/photographer-medias.js'
 ('photographer-medias', PhotographerMedias());
-import {PhotographerProfile} from './script/photographer-page.js'// nom a adapterou suprimer
+import {PhotographerProfile} from './script/photographer-page.js'// nom a adapter( suivant les tags)
 ('photographer-profile', PhotographerProfile());
 
 
