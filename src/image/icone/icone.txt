@@ -1,3 +1,0 @@
-<i class="fa-light fa-camera"></i>
-Unicode : f030
-
