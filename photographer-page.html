@@ -28,7 +28,7 @@
       <!--SLIDER-->
       <div id="slider" class="slider">
         <div id="slider-all">
-          <div tabindex="3" id="previous" class="arrow">
+          <div tabindex="5" id="previous" class="arrow">
             <img
               class="arrow"
               src="medias/arrowleft.png"
@@ -42,16 +42,15 @@
               </div>
               <div class="slider-content"></div>
             </div>
-            <div id="close-slider" tabindex="0">
+            <div id="close-slider" tabindex="6">
               <img
-                tabindex="0"
                 class="cross"
                 src="medias/cross.png"
                 alt="Fermer le diaporama"/>
             </div>
           </div>
           <div>
-            <div id="next" class="arrow" tabindex="0">
+            <div id="next" class="arrow" tabindex="5">
               <img
                 src="medias/arrowright.png"
                 alt="Passer à la diapo suivante"/>
@@ -67,7 +66,7 @@
             <div class="form-header">
               <h2 id="form-title">Contactez-moi</h2>
               <p id="form-title-name"></p>
-              <button tabindex="5" id="close">
+              <button tabindex="0" id="close">
                 <img
                   src="medias/crossclose.png"
                   alt="Fermer le formulaire de contact sans envoyer de message"/>
@@ -80,7 +79,7 @@
                   <label for="first">Prénom</label>
                   <br>
                   <input
-                    tabindex="5"
+                    tabindex="4"
                     class="text-control"
                     type="text"
                     id="first"
@@ -95,7 +94,7 @@
                   <label for="last">Nom</label>
                   <br>
                   <input
-                    tabindex="5"
+                    tabindex="4"
                     class="text-control"
                     type="text"
                     id="last"
@@ -109,7 +108,7 @@
                   <label for="email">E-mail</label>
                   <br>
                   <input
-                    tabindex="5"
+                    tabindex="4"
                     class="text-control"
                     type="email"
                     id="email"
@@ -123,7 +122,7 @@
                   <label for="message">Votre message</label>
                   <br>
                   <textarea
-                    tabindex="5"
+                    tabindex="4"
                     class="text-control"
                     id="message"
                     name="message"
@@ -137,7 +136,7 @@
                     href="#"
                     class="button btn-submit btn-submit_off"
                     id="btn-envoi"
-                    tabindex="5">
+                    tabindex="4">
                     Envoyer
                   </a>
                 </div>
@@ -157,7 +156,7 @@
                 <p id="taglineProfil"></p>
                 <div id="tagProfil"></div>
               </div>
-              <button tabindex="5" class="contactButton" id="contactButton">
+              <button tabindex="0" class="contactButton" id="contactButton">
                 Contactez-moi
               </button>
               <div id="photoProfil"></div>
@@ -168,7 +167,7 @@
           <div class="sort">
             <span id="sort-text">Triez-par</span>
             <button
-              tabindex="2"
+              tabindex="1"
               id="sort-list_closed"
               class="popularity-btn sort-list_closed">
               <span id="selected-filter" class="category category-closed">
@@ -184,7 +183,7 @@
               <ul>
                 <li>
                   <button
-                    tabindex="2"
+                    tabindex="1"
                     id="popularity-btn"
                     class="sort-by_popu"
                     data-order="popularity">
@@ -194,7 +193,7 @@
                 </li>
                 <li>
                   <button
-                    tabindex="2"
+                    tabindex="1"
                     id="date-btn"
                     class="sort-by sort-by_date"
                     data-order="date">
@@ -204,7 +203,7 @@
 
                 <li>
                   <button
-                    tabindex="2"
+                    tabindex="1"
                     id="title-btn"
                     class="sort-by sort-by_title"
                     data-order="title">

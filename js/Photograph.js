@@ -15,12 +15,14 @@ class Photographer {
     let tagHtml = "";
     for (let i = 0; i < this.tags.length; i++) {
       let tag = this.tags[i];
-      tagHtml += `<span tabindex="0" class="tag-photographe">#${tag}</span>`;
+      // tags sous chaque photographe de la page principale
+      tagHtml += `<span tabindex="11" class="tag-photographe">#${tag}</span>`;
+
     }
 
   /*pour afficher le photograph sur la page photographer-page*/
     return `
-       <a tabindex="0" href="photographer-page.html?id=${this.id}" class="linkPhotographer">
+       <a tabindex="12" href="photographer-page.html?id=${this.id}" class="linkPhotographer">
         <div class="photoIdentite"><img src="medias/photographersIDPhotosb/${this.portrait}" alt="lien vers la page de ${this.name}"></div>
         <h2 class="identite">${this.name}</h2>
         <p class="lieu">${this.city}, ${this.country}</p>
@@ -34,8 +36,9 @@ class Photographer {
   displayTags() {
     let html = "";
 
+    // Tag de la page détail
     this.tags.forEach((tag) => {
-      html += `<a tabindex="0" href="index.html?tag=${tag}" class="tag-photographe" id="${tag}">#${tag}</a>`;
+      html += `<a tabindex="10" href="index.html?tag=${tag}" class="tag-photographe" id="${tag}">#${tag}</a>`;
     });
 
     document.getElementById("tagProfil").innerHTML = html;
