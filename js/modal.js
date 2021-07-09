@@ -24,6 +24,11 @@ let mailRegex =
 launchBtn.addEventListener("click", launchModal);
 
 closeBtn.addEventListener("click", fermerFormulaire);
+window.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape') {
+    fermerFormulaire();
+  }
+});
 
 prenom.addEventListener("keyup", validerPrenom);
 
