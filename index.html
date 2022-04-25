@@ -1,47 +1,58 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="utf-8" />
-    <title>FishEye</title>
-    <link rel="icon" type="image/png" href="./favicon.png" />
-    <meta name="description"content="FishEye, photographies de professionnels"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style.css" type="text/css" />
-    <link href="https://fonts.googleapis.com/css?family=DM+Sans"rel="stylesheet"/>
-    <script src="https://kit.fontawesome.com/f272fe714d.js"crossorigin="anonymous"></script>
-  </head>
-  <body>
-    <div class="container">
-      <!--Header-->
-      <header id="header">
-        <div>
-          <a
-            href="index.html"
-            tabindex="1"
-            id="logo"
-            aria-label="lien vers page d'accueil de FishEye ">
-            <img src="medias/logo.png" alt="Logo de FishEye" />
-          </a>
-        </div>
-        <nav id="tags" aria-label="Filtrer les photographes par tags"></nav>
-        <!--emplacement pour tags filtrants générés en js-->
-        <div><h1>Nos photographes</h1></div>
-      </header>
 
-      <!--Scroll-->
-      <a href="#" class="scroll">Passer au contenu</a>
-      <!--scroll (surtout utile en format mobile)-->
+<head>
+  <meta charset="utf-8" />
+  <title>FishEye</title>
+  <link rel="icon" type="image/png" href="./favicon.png" />
+  <meta name="description" content="FishEye, photographies de professionnels" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/style.css" type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=DM+Sans" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/f272fe714d.js" crossorigin="anonymous"></script>
+</head>
 
-      <!--Section PRINCIPALE-->
-      <main class="accueil" id="main"></main>
-      <!--contiendra tous les "articles"=photographes créés en js-->
-
-      <!-- Liens JS-->
-      <script src="js/index.js"></script>
-      <script src="js/Scroll.js"></script>
-      <script src="js/Photograph.js"></script>
-      <script src="js/MediaSelect.js"></script>
-      <script src="js/details.js"></script>
+<body>
+  <!-- z-index: 1 nécessaire dans le css pour avoir le lien au 1er plan , target="_blank" ouvre un nouvel onglet -->
+  <div class="fab-container">
+    <div class="iconbutton">
+      <a href="https://nymerialucky.github.io/Mon-Portfolio/" target="_self">
+        <!-- _self on reste dans le même onglet -->
+        <i class="fas fa-share-square fa-2x" title="Revenir au portfolio"></i>
+      </a>
     </div>
-  </body>
+  </div>
+
+  <div class="container">
+    <!--Header-->
+    <header id="header">
+      <div>
+        <a href="index.html" tabindex="1" id="logo" aria-label="lien vers page d'accueil de FishEye ">
+          <img src="medias/logo.png" alt="Logo de FishEye" />
+        </a>
+      </div>
+      <nav id="tags" aria-label="Filtrer les photographes par tags"></nav>
+      <!--emplacement pour tags filtrants générés en js-->
+      <div>
+        <h1>Nos photographes</h1>
+      </div>
+    </header>
+
+    <!--Scroll-->
+    <a href="#" class="scroll">Passer au contenu</a>
+    <!--scroll (surtout utile en format mobile)-->
+
+    <!--Section PRINCIPALE-->
+    <main class="accueil" id="main"></main>
+    <!--contiendra tous les "articles"=photographes créés en js-->
+
+    <!-- Liens JS-->
+    <script src="js/index.js"></script>
+    <script src="js/Scroll.js"></script>
+    <script src="js/Photograph.js"></script>
+    <script src="js/MediaSelect.js"></script>
+    <script src="js/details.js"></script>
+  </div>
+</body>
+
 </html>
